@@ -1,3 +1,15 @@
-<p>
-  course-item works!
-</p>
+<div class="alert alert-info mt-2" role="alert">
+  <div class="row">
+    <div class="col-10">
+      <p>Some Item Info... title: {{courseItem.title}}</p>
+      <p>Some Item Info... creationDate: {{courseItem.creationDate}}</p>
+      <p>Some Item Info... description: {{courseItem.description}}</p>
+    </div>
+    <div class="col-2 d-flex flex-row-reverse">
+      <div class="btn-group-vertical">
+          <button type="button" class="btn btn-info">Edit</button>
+          <button type="button" class="btn btn-outline-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
