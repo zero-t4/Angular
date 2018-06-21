@@ -11,7 +11,7 @@ export class CourseListComponent implements OnInit {
 
   constructor() { }
 
-  @Output() loadMoreCoursesHandler(): void {
+  loadMoreCoursesHandler(): void {
     console.log('Load more button – click handler');
   }
 

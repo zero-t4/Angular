@@ -1,6 +1,5 @@
-import {Component, OnInit, Input, Output} from '@angular/core';
+import {Component, OnInit, Input } from '@angular/core';
 import {ICourseItemModel} from './course-item.model';
-import {st} from '@angular/core/src/render3';
 
 export class CourseItemEntity implements ICourseItemModel {
   public id;
@@ -34,7 +33,7 @@ export class CourseItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Output() deleteHandler(id: number): void {
+  deleteHandler(id: number): void {
     console.log(id);
   }
 

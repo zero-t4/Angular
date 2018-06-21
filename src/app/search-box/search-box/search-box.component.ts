@@ -8,7 +8,7 @@ import {Component, Input, OnInit, Output} from '@angular/core';
 export class SearchBoxComponent implements OnInit {
   @Input() searchInput: string;
 
-  @Output() searchHandler(e) {
+  searchHandler(e) {
     console.log(e);
   }
   constructor() { }
