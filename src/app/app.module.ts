@@ -7,7 +7,6 @@ import {BreadcrumbsModule} from './breadcrumbs/breadcrumbs.module';
 import {SearchBoxModule} from './search-box/search-box.module';
 import {FooterModule} from './footer/footer.module';
 import {CoursesModule} from './course/courses.module';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +19,6 @@ import { FormsModule } from '@angular/forms';
     SearchBoxModule,
     FooterModule,
     CoursesModule,
-    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
