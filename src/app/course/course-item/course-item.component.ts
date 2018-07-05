@@ -33,13 +33,13 @@ export class CourseItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  deleteHandler(id: number): void {
+  public deleteHandler(id: number): void {
     console.log(id);
   }
 
-  formatTime(duration: number): string {
+  public formatTime(duration: number): string {
     const hours = Math.floor( duration / 60);
     const minutes = duration % 60;
-    return `${hours ? hours + 'h' : ''} ${minutes}min`;
+    return `${hours ? hours + 'h ' : ''}${minutes}min`;
   }
 }

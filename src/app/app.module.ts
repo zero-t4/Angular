@@ -18,7 +18,7 @@ import {CoursesModule} from './course/courses.module';
     BreadcrumbsModule,
     SearchBoxModule,
     FooterModule,
-    CoursesModule
+    CoursesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
