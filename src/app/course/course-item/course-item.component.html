@@ -3,11 +3,11 @@
     <div class="col-10">
       <div class="row">
         <div class="col-7">
-            <p>{{courseItem.title}}</p>
+            <p>{{courseItem.title | uppercase}}</p>
         </div>
         <div class="col-3">
-          <span class="pr-5">{{formatTime(courseItem.duration)}}</span>
-          <span>{{courseItem.creationDate}}</span>
+          <span class="pr-5">{{courseItem.duration | durationPipe}}</span>
+          <span>{{courseItem.creationDate | date:'dd.MM.yyyy'}}</span>
         </div>
       </div>
       <div class="row">

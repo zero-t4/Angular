@@ -1,6 +1,6 @@
 <div class="component">
   <app-course-item
-    *ngFor="let item of courseItems"
+    *ngFor="let item of courseItems | orderBy"
     [courseItem]="item"
     [appColorHighlightBind]="item"
   ></app-course-item>
