@@ -1,16 +1,15 @@
-import { Directive, ElementRef, Renderer2, Input } from '@angular/core';
+import {Directive, ElementRef, Renderer2, Input, OnInit} from '@angular/core';
 
 @Directive({
   selector: '[appColorHighlightBind]'
 })
-export class ColorHighlightDirective {
+export class ColorHighlightDirective implements OnInit {
   @Input('appColorHighlightBind') date: string;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {
-    console.log(this.date);
+  ngOnInit() {
     const creationDate = new Date(this.date);
     const currentDate = new Date();
-    const element = this.el.nativeElement;
+    const element = this.el.nativeElement.querySelector('div');
 
     const isFreshCourse = creationDate.getTime() < currentDate.getTime() &&
       creationDate.getTime() >= currentDate.setDate(currentDate.getDate() - 14);
@@ -22,4 +21,6 @@ export class ColorHighlightDirective {
       this.renderer.setStyle(element, 'border', '1px solid aqua');
     }
   }
+
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
 }

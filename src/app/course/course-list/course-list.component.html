@@ -2,7 +2,7 @@
   <app-course-item
     *ngFor="let item of courseItems | orderBy"
     [courseItem]="item"
-    [appColorHighlightBind]="item"
+    [appColorHighlightBind]="item.creationDate"
   ></app-course-item>
   <button (click)="loadMoreCoursesHandler()" type="button" class="btn btn-secondary btn-lg btn-block">LOAD MORE</button>
 </div>

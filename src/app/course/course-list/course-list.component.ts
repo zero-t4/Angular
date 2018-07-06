@@ -21,7 +21,7 @@ export class CourseListComponent implements OnInit {
       {
         id: 0,
         title: 'First Title',
-        creationDate: new Date('2018-06-14'),
+        creationDate: new Date(new Date().setDate(new Date().getDate() + 1)),
         duration: 60,
         description: 'some description',
       },
@@ -29,7 +29,7 @@ export class CourseListComponent implements OnInit {
       {
         id: 2,
         title: 'Third Title',
-        creationDate: new Date('2018-06-01'),
+        creationDate: new Date(new Date().setDate(new Date().getDate() - 1)),
         duration: 44,
         description: 'Awesome description',
       },
