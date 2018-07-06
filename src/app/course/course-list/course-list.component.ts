@@ -29,14 +29,14 @@ export class CourseListComponent implements OnInit {
       {
         id: 2,
         title: 'Third Title',
-        creationDate: new Date('2018-06.01'),
+        creationDate: new Date('2018-06-01'),
         duration: 44,
         description: 'Awesome description',
       },
       {
         id: 1,
         title: 'Second Title',
-        creationDate: new Date('2018-06.11'),
+        creationDate: new Date('2018-06-11'),
         duration: 20,
         description: 'Cool description',
       },
