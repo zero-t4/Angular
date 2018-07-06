@@ -1,7 +1,7 @@
 <div class="container">
   <app-header></app-header>
   <app-breadcrumbs></app-breadcrumbs>
-  <app-search-box></app-search-box>
-  <app-course-list></app-course-list>
+  <app-search-box (filterFunc)='filterFunc($event)'></app-search-box>
+  <app-course-list [items]="courseItems"></app-course-list>
   <app-footer></app-footer>
 </div>
