@@ -1,5 +1,6 @@
 import {Component, OnInit } from '@angular/core';
-import { CourseItemEntity } from '../course-item/course-item.component';
+import {CoursesService} from '../../services/courses.service';
+import {CourseItemEntity} from '../course-item/course-item.component';
 
 @Component({
   selector: 'app-course-list',
@@ -7,38 +8,20 @@ import { CourseItemEntity } from '../course-item/course-item.component';
   styleUrls: ['./course-list.component.css']
 })
 export class CourseListComponent implements OnInit {
-  public courseItems: CourseItemEntity[] = [];
 
-  constructor() { }
+  public courseItems: CourseItemEntity[];
 
-  loadMoreCoursesHandler(): void {
+  constructor(private coursesService: CoursesService) { }
+
+  private loadMoreCoursesHandler(): void {
     console.log('Load more button – click handler');
   }
 
   ngOnInit() {
-    console.log('ngOnInit', ' app-course-list');
-    this.courseItems = CourseItemEntity.listCreator([
-      {
-        id: 0,
-        title: 'First Title',
-        creationDate: '14.06.2018',
-        duration: 60,
-        description: 'some description',
-      },
-      {
-        id: 1,
-        title: 'Second Title',
-        creationDate: '11.06.2018',
-        duration: 20,
-        description: 'Cool description',
-      },
-      {
-        id: 2,
-        title: 'Third Title',
-        creationDate: '01.06.2018',
-        duration: 44,
-        description: 'Awesome description',
-      },
-    ]);
+    this.loadCourses();
+  }
+
+  public loadCourses(): void {
+    this.courseItems = this.coursesService.getCourseItems();
   }
 }

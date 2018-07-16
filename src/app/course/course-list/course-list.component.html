@@ -1,4 +1,8 @@
 <div class="component">
-  <app-course-item *ngFor="let item of courseItems" [courseItem]="item"></app-course-item>
+  <app-course-item
+    *ngFor="let item of courseItems"
+    [courseItem]="item"
+    (loadCourses)="loadCourses()"
+  ></app-course-item>
   <button (click)="loadMoreCoursesHandler()" type="button" class="btn btn-secondary btn-lg btn-block">LOAD MORE</button>
 </div>
