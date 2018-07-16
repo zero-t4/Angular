@@ -9,6 +9,7 @@ import {FooterModule} from './footer/footer.module';
 import {CoursesModule} from './course/courses.module';
 import {CoursesService} from './services/courses.service';
 import {AuthService} from './services/auth.service';
+import {LoginPageModule} from './login-page/login-page.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {AuthService} from './services/auth.service';
     SearchBoxModule,
     FooterModule,
     CoursesModule,
+    LoginPageModule,
   ],
   providers: [CoursesService, AuthService],
   bootstrap: [AppComponent]
