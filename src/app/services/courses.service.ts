@@ -12,9 +12,7 @@ export class CoursesService {
   constructor() { }
 
   getCourseItems(): CourseItemEntity[] {
-    return [
-      ...this.courseItems
-    ];
+    return this.courseItems;
   }
 
   createCourse(el: ICourseItemModel): boolean {

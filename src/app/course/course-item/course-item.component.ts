@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {Component, OnInit, Input } from '@angular/core';
 import {ICourseItemModel} from './course-item.model';
 import {CoursesService} from '../../services/courses.service';
 
@@ -30,8 +30,6 @@ export class CourseItemEntity implements ICourseItemModel {
 export class CourseItemComponent implements OnInit {
   @Input() public courseItem: CourseItemEntity;
 
-  @Output() loadCourses = new EventEmitter();
-
   constructor(private coursesService: CoursesService) { }
 
   ngOnInit() {
@@ -41,7 +39,6 @@ export class CourseItemComponent implements OnInit {
     const answer = window.confirm('Do you really want to delete this item?');
     if (answer) {
       this.coursesService.removeItem(id);
-      this.loadCourses.emit()
     }
   }
 
