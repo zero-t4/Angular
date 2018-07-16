@@ -7,19 +7,29 @@ export class AuthService {
 
   constructor() { }
 
-  login() {
-
+  login({
+    login,
+    pass,
+  }): void {
+    localStorage.setItem('login', login);
+    localStorage.setItem('pass', pass);
+    console.log('logged in successfully');
   }
 
-  logout() {
-
+  logout(): void {
+    localStorage.clear();
   }
 
-  isAuthenticated() {
-
+  isAuthenticated(): boolean {
+    return Boolean(localStorage.getItem('login') && localStorage.getItem('pass'));
   }
 
   getUserInfo() {
-
+    const login = localStorage.getItem('login');
+    const pass = localStorage.getItem('pass');
+    return {
+      login,
+      pass,
+    }
   }
 }
