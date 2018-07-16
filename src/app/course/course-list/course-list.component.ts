@@ -8,7 +8,6 @@ import {CourseItemEntity} from '../course-item/course-item.component';
   styleUrls: ['./course-list.component.css']
 })
 export class CourseListComponent implements OnInit {
-
   public courseItems: CourseItemEntity[];
 
   constructor(private coursesService: CoursesService) { }
