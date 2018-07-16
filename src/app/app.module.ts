@@ -8,6 +8,7 @@ import {SearchBoxModule} from './search-box/search-box.module';
 import {FooterModule} from './footer/footer.module';
 import {CoursesModule} from './course/courses.module';
 import {CoursesService} from './services/courses.service';
+import {AuthService} from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import {CoursesService} from './services/courses.service';
     FooterModule,
     CoursesModule,
   ],
-  providers: [CoursesService],
+  providers: [CoursesService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
