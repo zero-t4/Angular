@@ -1,3 +1,38 @@
-<p>
-  add-edit-page works!
-</p>
+<div>
+  <label for="title">Title</label>
+  <div class="input-group mb-3">
+    <input type="text" value="Sample title" class="form-control" id="title">
+  </div>
+  <label for="description">Description</label>
+  <div class="input-group mb-3">
+    <textarea rows="5" type="text" class="form-control" id="description">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+    </textarea>
+  </div>
+  <label for="date">Date</label>
+  <div class="input-group mb-3 container">
+    <div class="row">
+      <div class="col p-0">
+        <input type="date" value="2018-05-29" class="form-control" id="date">
+      </div>
+    </div>
+  </div>
+  <label for="duration">Duration</label>
+  <div class="input-group mb-3 container">
+    <div class="d-flex flex-row">
+      <div class="col p-0">
+        <input [(ngModel)]="duration" type="text" value="88" class="form-control"  id="duration">
+        <span>
+          {{ duration | durationPipe}}
+        </span>
+      </div>
+    </div>
+  </div>
+  <!--TODO show also date pipe-->
+  <label for="authors">Authors</label>
+  <div class="input-group mb-3">
+    <input type="text" value="Sample authors" class="form-control" id="authors">
+  </div>
+  <button type="button" class="btn btn-primary btn-lg px-5 mr-4" (click)="emptyHandler()">Save</button>
+  <button type="button" class="btn btn-secondary btn-lg px-5" (click)="emptyHandler()">Cancel</button>
+</div>

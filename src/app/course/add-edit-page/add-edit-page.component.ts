@@ -12,4 +12,8 @@ export class AddEditPageComponent implements OnInit {
   ngOnInit() {
   }
 
+  public emptyHandler() {
+    console.log('emptyHandler call');
+  }
+
 }
