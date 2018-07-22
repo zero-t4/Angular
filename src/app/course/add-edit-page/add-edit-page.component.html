@@ -18,14 +18,12 @@
     </div>
   </div>
   <label for="duration">Duration</label>
-  <div class="input-group mb-3 container">
-    <div class="d-flex flex-row">
-      <div class="col p-0">
-        <input [(ngModel)]="duration" type="text" value="88" class="form-control"  id="duration">
+  <div class="input-group mb-3 p-0">
+    <div class="d-flex flex-row align-items-center p-0">
+        <input [(ngModel)]="duration" type="text" value="88" class="form-control mr-4"  id="duration">
         <span>
           {{ duration | durationPipe}}
         </span>
-      </div>
     </div>
   </div>
   <!--TODO show also date pipe-->

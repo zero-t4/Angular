@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-add-edit-page',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-edit-page.component.css']
 })
 export class AddEditPageComponent implements OnInit {
+  @Input() duration: string;
 
   constructor() { }
 
