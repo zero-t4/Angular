@@ -7,6 +7,9 @@ import {BreadcrumbsModule} from './breadcrumbs/breadcrumbs.module';
 import {SearchBoxModule} from './search-box/search-box.module';
 import {FooterModule} from './footer/footer.module';
 import {CoursesModule} from './course/courses.module';
+import {CoursesService} from './services/courses.service';
+import {AuthService} from './services/auth.service';
+import {LoginPageModule} from './login-page/login-page.module';
 
 @NgModule({
   declarations: [
@@ -19,8 +22,9 @@ import {CoursesModule} from './course/courses.module';
     SearchBoxModule,
     FooterModule,
     CoursesModule,
+    LoginPageModule,
   ],
-  providers: [],
+  providers: [CoursesService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

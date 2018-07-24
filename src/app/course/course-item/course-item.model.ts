@@ -5,3 +5,12 @@ export interface ICourseItemModel {
   duration: number;
   description: string;
 }
+
+
+export interface ICourseItemUpdateModel {
+  id: number;
+  title?: string;
+  creationDate?: string;
+  duration?: number;
+  description?: string;
+}
