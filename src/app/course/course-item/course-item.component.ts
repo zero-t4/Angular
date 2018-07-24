@@ -1,5 +1,6 @@
 import {Component, OnInit, Input } from '@angular/core';
 import {ICourseItemModel} from './course-item.model';
+import {CoursesService} from '../../services/courses.service';
 
 export class CourseItemEntity implements ICourseItemModel {
   public id;
@@ -28,12 +29,16 @@ export class CourseItemEntity implements ICourseItemModel {
 })
 export class CourseItemComponent implements OnInit {
   @Input() public courseItem: CourseItemEntity;
-  constructor() { }
+
+  constructor(private coursesService: CoursesService) { }
 
   ngOnInit() {
   }
 
   public deleteHandler(id: number): void {
-    console.log(id);
+    const answer = window.confirm('Do you really want to delete this item?');
+    if (answer) {
+      this.coursesService.removeItem(id);
+    }
   }
 }
