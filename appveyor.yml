@@ -1,0 +1,2 @@
+init:
+- ps: Install-Product node 10
