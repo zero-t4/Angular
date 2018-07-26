@@ -1,4 +1,5 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {CoursesService} from '../../services/courses.service';
 
 @Component({
   selector: 'app-search-box',
@@ -7,13 +8,12 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class SearchBoxComponent implements OnInit {
   @Input() searchInput: string;
-  @Output() filterFunc: EventEmitter<string> = new EventEmitter<string>();
 
-  searchHandler(e) {
-    console.log(e);
-    this.filterFunc.emit(this.searchInput);
+  constructor(private coursesService: CoursesService) { }
+
+  searchHandler(searchInput) {
+    this.coursesService.filterCourseItems(searchInput);
   }
-  constructor() { }
 
   ngOnInit() {
   }
