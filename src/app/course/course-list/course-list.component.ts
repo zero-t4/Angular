@@ -12,7 +12,7 @@ export class CourseListComponent implements OnInit {
 
   constructor(private coursesService: CoursesService) { }
 
-  private loadMoreCoursesHandler(): void {
+  public loadMoreCoursesHandler(): void {
     console.log('Load more button – click handler');
   }
 
