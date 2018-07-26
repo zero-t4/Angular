@@ -14,9 +14,12 @@ export class LoginPageComponent implements OnInit {
   }
 
   loginHandler() {
+    const login =   document.querySelector('#basic-email') as HTMLInputElement;
+    const pass = document.querySelector('#basic-password') as HTMLInputElement;
+
     const data = {
-      login: document.querySelector('#basic-email').value,
-      pass: document.querySelector('#basic-password').value
+      login: login.value,
+      pass: pass.value
     };
 
     this.authService.login(data)
