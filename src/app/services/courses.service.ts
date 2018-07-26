@@ -8,10 +8,25 @@ import { find, remove } from 'lodash';
   providedIn: 'root'
 })
 export class CoursesService {
+  private data = courseItems;
   private courseItems = courseItems;
   constructor() { }
 
   getCourseItems(): CourseItemEntity[] {
+    return this.courseItems;
+  }
+
+  filterCourseItems(searchInput: string): CourseItemEntity[] {
+    this.courseItems = [
+      ...this.data.filter(
+        el => el
+          .title
+          .toLowerCase()
+          .includes(
+            searchInput.toLowerCase()
+          )
+      )
+    ];
     return this.courseItems;
   }
 
