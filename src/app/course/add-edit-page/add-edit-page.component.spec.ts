@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddEditPageComponent } from './add-edit-page.component';
+import {FormsModule} from '@angular/forms';
+import {DurationPipe} from '../../pipes/duration.pipe';
 
 describe('AddEditPageComponent', () => {
   let component: AddEditPageComponent;
@@ -8,7 +10,8 @@ describe('AddEditPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddEditPageComponent ]
+      declarations: [ AddEditPageComponent, DurationPipe ],
+      imports: [ FormsModule ]
     })
     .compileComponents();
   }));
