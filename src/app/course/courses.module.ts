@@ -7,11 +7,20 @@ import {DurationPipe} from '../pipes/duration.pipe';
 import {OrderByPipe} from '../pipes/order-by.pipe';
 import { AddEditPageComponent } from './add-edit-page/add-edit-page.component';
 import {FormsModule} from '@angular/forms';
+import {CoursesComponent} from "./courses/courses.component";
+import {HeaderModule} from "../header/header.module";
+import {BreadcrumbsModule} from "../breadcrumbs/breadcrumbs.module";
+import {SearchBoxModule} from "../search-box/search-box.module";
+import {FooterModule} from "../footer/footer.module";
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    HeaderModule,
+    BreadcrumbsModule,
+    SearchBoxModule,
+    FooterModule,
   ],
   declarations: [
     CourseListComponent,
@@ -20,7 +29,12 @@ import {FormsModule} from '@angular/forms';
     DurationPipe,
     OrderByPipe,
     AddEditPageComponent,
+    CoursesComponent
   ],
-  exports: [CourseListComponent, AddEditPageComponent]
+  exports: [
+    CoursesComponent,
+    CourseListComponent,
+    AddEditPageComponent,
+  ]
 })
 export class CoursesModule { }
