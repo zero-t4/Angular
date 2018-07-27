@@ -4,14 +4,12 @@ version: 1.{build}
 image: Previous Visual Studio 2017
 
 init:
-- ps: Install-Product node 10
-
+- ps: Install-Product node ''
 install:
 - cmd: npm install
 
 build_script:
-- cmd npm run build
-
+- cmd: npm run build
 test_script:
 - cmd: npm run test
 
