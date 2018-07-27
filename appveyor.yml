@@ -1,7 +1,7 @@
 # version format
 version: 1.{build}
 
-image: Visual Studio 2017
+image: Previous Visual Studio 2017
 
 init:
 - ps: Install-Product node 10
