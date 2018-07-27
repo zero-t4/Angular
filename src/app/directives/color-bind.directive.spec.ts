@@ -13,9 +13,27 @@ const upDateString = upDate.toISOString().split('T')[0];
 
 @Component({
   template: `
-    <h2 [appColorHighlightBind]='"${dateString}"' >Something Green</h2>
-    <h2>Something h2</h2>
-    <h2 [appColorHighlightBind]='"${upDateString}"' >Something Aqua</h2>
+    <div [appColorHighlightBind]='"${dateString}"' >
+      <div>
+        <h2>
+          Something Green
+        </h2>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h2>
+          Something h2
+        </h2>
+      </div>
+    </div>
+    <div [appColorHighlightBind]='"${upDateString}"' >
+      <div>
+        <h2>
+          Something Aqua
+        </h2>
+      </div>
+    </div>
   `
 })
 class TestComponent { }
@@ -44,11 +62,11 @@ describe('ColorHighlightDirective', () => {
   });
 
   it('should show green color ', () => {
-    const bgColor = des[0].nativeElement.style.border;
+    const bgColor = des[0].nativeElement.querySelector('div').style.border;
     expect(bgColor).toBe('1px solid green');
   });
   it('should show aqua color ', () => {
-    const bgColor = des[1].nativeElement.style.border;
+    const bgColor = des[1].nativeElement.querySelector('div').style.border;
     expect(bgColor).toBe('1px solid aqua');
   });
 });
