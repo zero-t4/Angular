@@ -1,7 +1,7 @@
 import {Route} from "@angular/router";
 import {LoginPageComponent} from "./login-page/login-page.component";
 import {NotFoundComponent} from "./not-found/not-found/not-found.component";
-import {CoursesComponent} from "./courses/courses.component";
+import {CoursesComponent} from "./course/courses/courses.component";
 import {AddEditPageComponent} from "./course/add-edit-page/add-edit-page.component";
 
 export const ROUTES:Route[] = [
