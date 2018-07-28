@@ -10,8 +10,6 @@ install:
 
 build_script:
 - cmd: npm run build
-test_script:
-- cmd: npm run test
 
 on_success:
 - cmd: echo "Horray success build"
