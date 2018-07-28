@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {CoursesService} from '../../services/courses.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-search-box',
@@ -9,13 +10,20 @@ import {CoursesService} from '../../services/courses.service';
 export class SearchBoxComponent implements OnInit {
   @Input() searchInput: string;
 
-  constructor(private coursesService: CoursesService) { }
+  constructor(
+    private router: Router,
+    private coursesService: CoursesService
+  ) { }
 
   searchHandler(searchInput) {
     this.coursesService.filterCourseItems(searchInput);
   }
 
   ngOnInit() {
+  }
+
+  addCourse() {
+    this.router.navigate(['courses/new']);
   }
 
 }
