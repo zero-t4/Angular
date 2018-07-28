@@ -45,7 +45,7 @@ export class CoursesService {
 
   updateItem(id: number, data: ICourseItemUpdateModel ): boolean {
     const item = this.getItemById(id);
-    const newItem = {
+    const newItem: ICourseItemModel = {
       ...item,
       ...data,
     };

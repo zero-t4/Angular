@@ -40,7 +40,7 @@ export class CourseItemComponent implements OnInit {
   }
 
   public edit(id: number): void {
-    this.router.navigate([`courses/:${id}`]);
+    this.router.navigate([`courses/${id}`]);
   }
 
   public deleteHandler(id: number): void {

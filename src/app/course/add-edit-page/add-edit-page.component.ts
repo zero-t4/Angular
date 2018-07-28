@@ -1,5 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+import { Location } from '@angular/common';
+import {ICourseItemModel} from '../course-item/course-item.model';
+import {CoursesService} from '../../services/courses.service';
 
 @Component({
   selector: 'app-add-edit-page',
@@ -7,23 +10,43 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./add-edit-page.component.css']
 })
 export class AddEditPageComponent implements OnInit {
-  @Input() duration: string;
-  public routeParams: any = {};
+  @Input() newData = {};
+  public routeParams: ICourseItemModel | any = {};
 
-  constructor(private route: ActivatedRoute) { // ActivatedRouteSnapshot
-  }
+  constructor(
+    private location: Location,
+    private route: ActivatedRoute,
+    private coursesService: CoursesService
+  ) {}
 
   ngOnInit() {
-    this.route.params.subscribe((data) => {
-      this.routeParams.id = data['id'];
+    this.route.params.subscribe((data: ICourseItemModel | any) => {
+      if (data.id !== 'new') {
+        const fetchData = this.coursesService.getItemById(Number(data.id)) || {};
+        const {
+          id,
+          title,
+          creationDate,
+          duration,
+          description,
+        } = fetchData;
+        console.log(fetchData, 'fetchData');
+        this.routeParams.id = id;
+        this.routeParams.title = title;
+        this.routeParams.creationDate = new Date(creationDate).toISOString().slice(0,10);
+        this.routeParams.duration = duration;
+        this.routeParams.description = description;
+      }
     });
-    this.route.data.subscribe((data) => {
-      console.log(data);
-    });
+  };
+
+  public updateData(newData) {
+    console.log(newData);
+    this.coursesService.updateItem(this.routeParams.id, newData)
   }
 
-  public emptyHandler() {
-    console.log('emptyHandler call');
+  public cancel() {
+    this.location.back();
   }
 
 }
