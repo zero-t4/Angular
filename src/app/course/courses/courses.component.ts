@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
-  styleUrls: ['./courses.component.css']
+  styleUrls: ['./courses.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CoursesComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private authService: AuthService
+  ) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    if (!this.authService.isAuthenticated()) {
+      this.router.navigate(['/login'])
+    }
   }
 
 }

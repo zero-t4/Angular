@@ -6,9 +6,9 @@
       </div>
       <div class="card-body w450">
         <label for="basic-email">Email *required</label>
-        <input type="text" class="form-control" placeholder="Please enter email" id="basic-email">
+        <input [(ngModel)]="login" type="text" class="form-control" placeholder="Please enter email" id="basic-email">
         <label for="basic-password">Password *required</label>
-        <input type="text" class="form-control" placeholder="Please enter password" id="basic-password">
+        <input [(ngModel)]="pass" type="text" class="form-control" placeholder="Please enter password" id="basic-password">
         <a (click)="loginHandler()" href="#" class="btn btn-primary mt-2">Login</a>
       </div>
     </div>

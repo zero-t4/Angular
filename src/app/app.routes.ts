@@ -3,6 +3,7 @@ import {LoginPageComponent} from "./login-page/login-page.component";
 import {NotFoundComponent} from "./not-found/not-found/not-found.component";
 import {CoursesComponent} from "./course/courses/courses.component";
 import {AddEditPageComponent} from "./course/add-edit-page/add-edit-page.component";
+import {CanActivateCoursesGuard} from './guards/can-activate-courses.guard';
 
 export const ROUTES:Route[] = [
   // REDIRECTS
@@ -17,7 +18,8 @@ export const ROUTES:Route[] = [
   // PATHS
   {
     path: 'courses',
-    component: CoursesComponent
+    component: CoursesComponent,
+    // canActivate: [CanActivateCoursesGuard]
   },
   {
     path: 'courses/:id',
