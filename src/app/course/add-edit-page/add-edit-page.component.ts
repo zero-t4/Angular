@@ -22,7 +22,7 @@ export class AddEditPageComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((data: ICourseItemModel | any) => {
       if (data.id !== 'new') {
-        const fetchData = this.coursesService.getItemById(Number(data.id)) || {};
+        const fetchData: any = this.coursesService.getItemById(Number(data.id)) || {};
         const {
           id,
           title,
