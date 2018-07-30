@@ -1,26 +1,26 @@
 <div>
   <label for="title">Title</label>
   <div class="input-group mb-3">
-    <input [(ngModel)]="newData.title" type="text" value="{{ routeParams.title || 'Sample title'}}" class="form-control" id="title">
+    <input [(ngModel)]="newData.title" type="text" class="form-control" id="title">
   </div>
   <label for="description">Description</label>
   <div class="input-group mb-3">
-    <textarea [(ngModel)]="newData.description" rows="5" type="text" class="form-control" id="description">{{routeParams.description || 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'}}</textarea>
+    <textarea [(ngModel)]="newData.description" rows="5" type="text" class="form-control" id="description"></textarea>
   </div>
   <label for="date">Date</label>
   <div class="input-group mb-3 container">
     <div class="row">
       <div class="col p-0">
-        <input type="date" [(ngModel)]="newData.creationDate" value="{{routeParams.creationDate || '2018-05-29'}}" class="form-control" id="date">
+        <input type="date" [(ngModel)]="newData.creationDate" class="form-control" id="date">
       </div>
     </div>
   </div>
   <label for="duration">Duration</label>
   <div class="input-group mb-3 p-0">
     <div class="d-flex flex-row align-items-center p-0">
-        <input [(ngModel)]="newData.duration" type="text" value="{{routeParams.duration}}" class="form-control mr-4"  id="duration">
+        <input [(ngModel)]="newData.duration" type="text" class="form-control mr-4"  id="duration">
         <span>
-          {{routeParams.duration | durationPipe}}
+          {{newData.duration | durationPipe}}
         </span>
     </div>
   </div>

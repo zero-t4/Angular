@@ -10,8 +10,7 @@ import {CoursesService} from '../../services/courses.service';
   styleUrls: ['./add-edit-page.component.css']
 })
 export class AddEditPageComponent implements OnInit {
-  @Input() newData = {};
-  public routeParams: ICourseItemModel | any = {};
+  @Input() newData: ICourseItemModel | any  = {};
 
   constructor(
     private location: Location,
@@ -31,18 +30,19 @@ export class AddEditPageComponent implements OnInit {
           description,
         } = fetchData;
         console.log(fetchData, 'fetchData');
-        this.routeParams.id = id;
-        this.routeParams.title = title;
-        this.routeParams.creationDate = new Date(creationDate).toISOString().slice(0,10);
-        this.routeParams.duration = duration;
-        this.routeParams.description = description;
+        this.newData.id = id;
+        this.newData.title = title || 'Sample title';
+        this.newData.creationDate = new Date(creationDate).toISOString().slice(0,10) || '2018-05-29';
+        this.newData.duration = duration;
+        this.newData.description = description || 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.';
       }
     });
   };
 
   public updateData(newData) {
     console.log(newData);
-    this.coursesService.updateItem(this.routeParams.id, newData)
+    this.coursesService.updateItem(this.newData.id, newData);
+    this.location.back();
   }
 
   public cancel() {

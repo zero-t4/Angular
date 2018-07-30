@@ -27,6 +27,7 @@ export class CoursesService {
           )
       )
     ];
+
     return this.courseItems;
   }
 
@@ -49,15 +50,15 @@ export class CoursesService {
       ...item,
       ...data,
     };
-    this.createCourse(newItem);
     this.removeItem(newItem.id);
-
+    this.createCourse(newItem);
 
     return true;
   }
 
   removeItem(id: number): boolean {
     remove(this.courseItems, el => el.id === id);
+
     return true;
   }
 }
