@@ -3,11 +3,11 @@
     <li
       class="breadcrumb-item"
       aria-current="page"
-      routerLink="/login"
-      routerLinkActive="active"
     >
-      Courses
+      <a [routerLink]="['/courses']" [routerLinkActive]="'active'">
+        Courses
+      </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">one</li>
+    <li class="breadcrumb-item" aria-current="page">one</li>
   </ol>
 </nav>
