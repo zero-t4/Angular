@@ -2,7 +2,7 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import { CourseItemComponent } from './course-item.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {DurationPipe} from '../../pipes/duration.pipe';
-import {RouterTestingModule} from '@angular/router/testing';
+import {Router} from "@angular/router";
 
 describe('CourseItemComponent', () => {
   let component: CourseItemComponent;
@@ -10,9 +10,16 @@ describe('CourseItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
       declarations: [ CourseItemComponent, DurationPipe ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      providers: [{
+        provide: Router,
+        useValue: {
+          navigate: jasmine.createSpy(
+            'navigate',
+          )
+        }
+      }]
     })
       .compileComponents();
   }));
