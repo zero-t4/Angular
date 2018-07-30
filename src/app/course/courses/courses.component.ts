@@ -17,7 +17,7 @@ export class CoursesComponent implements OnInit {
 
   async ngOnInit() {
     if (!this.authService.isAuthenticated()) {
-      await this.router.navigate(['/login']);
+      return await this.router.navigate(['/login']);
     }
   }
 

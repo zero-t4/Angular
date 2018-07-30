@@ -3,7 +3,7 @@ import {LoginPageComponent} from "./login-page/login-page.component";
 import {NotFoundComponent} from "./not-found/not-found/not-found.component";
 import {CoursesComponent} from "./course/courses/courses.component";
 import {AddEditPageComponent} from "./course/add-edit-page/add-edit-page.component";
-import {CanActivateCoursesGuard} from './guards/can-activate-courses.guard';
+import {CanActivateIsAuthenticatedGuard} from './guards/can-activate-is-authenticated-guard.service';
 
 export const ROUTES:Route[] = [
   // REDIRECTS
@@ -19,15 +19,17 @@ export const ROUTES:Route[] = [
   {
     path: 'courses',
     component: CoursesComponent,
-    // canActivate: [CanActivateCoursesGuard]
+    canActivate: [CanActivateIsAuthenticatedGuard]
   },
   {
     path: 'courses/:id',
-    component: AddEditPageComponent
+    component: AddEditPageComponent,
+    canActivate: [CanActivateIsAuthenticatedGuard]
   },
   {
     path: 'courses/new',
-    component: AddEditPageComponent
+    component: AddEditPageComponent,
+    canActivate: [CanActivateIsAuthenticatedGuard]
   },
   {
     path: 'login',

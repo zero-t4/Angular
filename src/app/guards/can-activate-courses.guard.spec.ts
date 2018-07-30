@@ -1,17 +1,17 @@
-import { TestBed, async, inject } from '@angular/core/testing';
+import { TestBed, inject } from '@angular/core/testing';
 
-import { CanActivateCoursesGuard } from './can-activate-courses.guard';
+import { CanActivateIsAuthenticatedGuard } from './can-activate-is-authenticated-guard.service';
 import {RouterTestingModule} from '@angular/router/testing';
 
-describe('CanActivateCoursesGuard', () => {
+describe('CanActivateIsAuthenticatedGuard', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      providers: [CanActivateCoursesGuard]
+      providers: [CanActivateIsAuthenticatedGuard]
     });
   });
 
-  it('should ...', inject([CanActivateCoursesGuard], (guard: CanActivateCoursesGuard) => {
+  it('should ...', inject([CanActivateIsAuthenticatedGuard], (guard: CanActivateIsAuthenticatedGuard) => {
     expect(guard).toBeTruthy();
   }));
 });

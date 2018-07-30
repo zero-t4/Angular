@@ -1,8 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import { Location } from '@angular/common';
 import {ICourseItemModel} from '../course-item/course-item.model';
 import {CoursesService} from '../../services/courses.service';
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'app-add-edit-page',
@@ -15,10 +16,16 @@ export class AddEditPageComponent implements OnInit {
   constructor(
     private location: Location,
     private route: ActivatedRoute,
+    private router: Router,
+    private authService: AuthService,
     private coursesService: CoursesService
   ) {}
 
-  ngOnInit() {
+  async ngOnInit() {
+    if (!this.authService.isAuthenticated()) {
+      return await this.router.navigate(['/login']);
+    }
+
     this.route.params.subscribe((data: ICourseItemModel | any) => {
       if (data.id !== 'new') {
         const fetchData: any = this.coursesService.getItemById(Number(data.id)) || {};
