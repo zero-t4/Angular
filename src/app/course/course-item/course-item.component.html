@@ -18,7 +18,7 @@
     </div>
     <div class="col-2 d-flex flex-row-reverse">
       <div class="btn-group-vertical">
-          <button type="button" class="btn btn-info">Edit</button>
+          <button type="button" class="btn btn-info" (click)="edit(courseItem.id)">Edit</button>
           <button (click)="deleteHandler(courseItem.id)" type="button" class="btn btn-outline-danger">Delete</button>
       </div>
     </div>

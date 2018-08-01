@@ -1,23 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { SearchBoxComponent } from './search-box.component';
-import { FormsModule } from '@angular/forms';
+import { NotFoundComponent } from './not-found.component';
 import {RouterTestingModule} from '@angular/router/testing';
 
-describe('SearchBoxComponent', () => {
-  let component: SearchBoxComponent;
-  let fixture: ComponentFixture<SearchBoxComponent>;
+describe('NotFoundComponent', () => {
+  let component: NotFoundComponent;
+  let fixture: ComponentFixture<NotFoundComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SearchBoxComponent ],
-      imports: [ FormsModule, RouterTestingModule ]
+      imports: [RouterTestingModule],
+      declarations: [ NotFoundComponent ],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SearchBoxComponent);
+    fixture = TestBed.createComponent(NotFoundComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

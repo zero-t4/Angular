@@ -1,0 +1,25 @@
+# version format
+version: 1.{build}
+
+image: Previous Visual Studio 2017
+
+init:
+- ps: Install-Product node ''
+install:
+- cmd: npm install
+
+build_script:
+- cmd: npm run build
+
+on_success:
+- cmd: echo "Horray success build"
+- cmd: echo "Horray success build"
+- cmd: echo "Horray success build"
+
+on_failure:
+- cmd: echo "Oh, no failure..."
+- cmd: echo "Oh, no failure..."
+- cmd: echo "Oh, no failure..."
+
+on_finish:
+- cmd: echo "_Finish_"

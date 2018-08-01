@@ -1,6 +1,7 @@
 import {Component, OnInit, Input } from '@angular/core';
 import {ICourseItemModel} from './course-item.model';
 import {CoursesService} from '../../services/courses.service';
+import {Router} from '@angular/router';
 
 export class CourseItemEntity implements ICourseItemModel {
   public id;
@@ -30,9 +31,16 @@ export class CourseItemEntity implements ICourseItemModel {
 export class CourseItemComponent implements OnInit {
   @Input() public courseItem: CourseItemEntity;
 
-  constructor(private coursesService: CoursesService) { }
+  constructor(
+    private coursesService: CoursesService,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
+  }
+
+  public edit(id: number): void {
+    this.router.navigate([`courses/${id}`]);
   }
 
   public deleteHandler(id: number): void {

@@ -2,14 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {HeaderModule} from './header/header.module';
-import {BreadcrumbsModule} from './breadcrumbs/breadcrumbs.module';
-import {SearchBoxModule} from './search-box/search-box.module';
-import {FooterModule} from './footer/footer.module';
 import {CoursesModule} from './course/courses.module';
 import {CoursesService} from './services/courses.service';
 import {AuthService} from './services/auth.service';
 import {LoginPageModule} from './login-page/login-page.module';
+import {RouterModule} from "@angular/router";
+import {ROUTES} from "./app.routes";
+import {NotFoundModule} from "./not-found/not-found.module";
 
 @NgModule({
   declarations: [
@@ -17,12 +16,10 @@ import {LoginPageModule} from './login-page/login-page.module';
   ],
   imports: [
     BrowserModule,
-    HeaderModule,
-    BreadcrumbsModule,
-    SearchBoxModule,
-    FooterModule,
     CoursesModule,
     LoginPageModule,
+    NotFoundModule,
+    RouterModule.forRoot(ROUTES, { useHash: true })
   ],
   providers: [CoursesService, AuthService],
   bootstrap: [AppComponent]

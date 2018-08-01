@@ -8,10 +8,26 @@ import { find, remove } from 'lodash';
   providedIn: 'root'
 })
 export class CoursesService {
+  private data = courseItems;
   private courseItems = courseItems;
   constructor() { }
 
   getCourseItems(): CourseItemEntity[] {
+    return this.courseItems;
+  }
+
+  filterCourseItems(searchInput: string): CourseItemEntity[] {
+    this.courseItems = [
+      ...this.data.filter(
+        el => el
+          .title
+          .toLowerCase()
+          .includes(
+            searchInput.toLowerCase()
+          )
+      )
+    ];
+
     return this.courseItems;
   }
 
@@ -30,19 +46,19 @@ export class CoursesService {
 
   updateItem(id: number, data: ICourseItemUpdateModel ): boolean {
     const item = this.getItemById(id);
-    const newItem = {
+    const newItem: ICourseItemModel = {
       ...item,
       ...data,
     };
-    this.createCourse(newItem);
     this.removeItem(newItem.id);
-
+    this.createCourse(newItem);
 
     return true;
   }
 
   removeItem(id: number): boolean {
     remove(this.courseItems, el => el.id === id);
+
     return true;
   }
 }

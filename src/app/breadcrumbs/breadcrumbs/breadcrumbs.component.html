@@ -1,6 +1,23 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item" aria-current="page">Courses</li>
-    <li class="breadcrumb-item active" aria-current="page">one</li>
+    <li
+      class="breadcrumb-item"
+      aria-current="page"
+    >
+      <span
+        [routerLink]="['/courses']"
+        [routerLinkActive]="'active'"
+        [routerLinkActiveOptions]="{exact:true}"
+      >
+        Courses
+      </span>
+    </li>
+    <li
+      [hidden]="url === 'courses'"
+      class="breadcrumb-item active"
+      aria-current="page"
+    >
+      {{url}}
+    </li>
   </ol>
 </nav>

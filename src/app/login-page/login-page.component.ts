@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {AuthService} from '../services/auth.service';
+import {P} from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-login-page',
@@ -7,6 +8,8 @@ import {AuthService} from '../services/auth.service';
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
+  @Input() login: string;
+  @Input() pass: string;
 
   constructor(private authService: AuthService) { }
 
@@ -14,12 +17,17 @@ export class LoginPageComponent implements OnInit {
   }
 
   loginHandler() {
-    const data = {
-      login: document.querySelector('#basic-email').value,
-      pass: document.querySelector('#basic-password').value
-    };
+    const { login, pass } = this;
 
-    this.authService.login(data)
+    if (login && pass) {
+      const data = {
+        login,
+        pass,
+      };
+      this.authService.login(data)
+    } else {
+      console.log('bad credentials')
+    }
   }
 
 }

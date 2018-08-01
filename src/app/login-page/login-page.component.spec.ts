@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { LoginPageComponent } from './login-page.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
+import {FormsModule} from '@angular/forms';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('LoginPageComponent', () => {
   let component: LoginPageComponent;
@@ -8,7 +10,11 @@ describe('LoginPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginPageComponent ]
+      imports: [FormsModule, RouterTestingModule],
+      declarations: [
+        LoginPageComponent,
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));

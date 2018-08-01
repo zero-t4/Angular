@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { LoginPageComponent } from './login-page.component';
 import {HeaderModule} from '../header/header.module';
 import {FooterModule} from '../footer/footer.module';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     HeaderModule,
     FooterModule,
+    FormsModule,
   ],
   declarations: [LoginPageComponent],
   exports: [LoginPageComponent]
