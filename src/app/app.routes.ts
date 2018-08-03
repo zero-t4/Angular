@@ -19,7 +19,8 @@ export const ROUTES:Route[] = [
   {
     path: 'courses',
     component: CoursesComponent,
-    canActivate: [CanActivateIsAuthenticatedGuard]
+    // In order to make redirect to login page if not authenticated
+    // canActivate: [CanActivateIsAuthenticatedGuard]
   },
   {
     path: 'courses/:id',

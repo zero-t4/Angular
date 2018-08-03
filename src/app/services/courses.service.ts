@@ -41,7 +41,7 @@ export class CoursesService {
   }
 
   getItemById(id: number): ICourseItemModel {
-    return find(this.courseItems, { id });
+    return find(this.courseItems, { id }) || {};
   }
 
   updateItem(id: number, data: ICourseItemUpdateModel ): boolean {
