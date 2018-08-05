@@ -1,5 +1,5 @@
 import {Component, OnInit, Input } from '@angular/core';
-import {ICourseItemModel} from './course-item.model';
+import {ICourseItemBackEndModel, ICourseItemModel} from './course-item.model';
 import {CoursesService} from '../../services/courses.service';
 import {Router} from '@angular/router';
 
@@ -18,8 +18,19 @@ export class CourseItemEntity implements ICourseItemModel {
     this.description = data.description;
   }
 
-  public static listCreator(data: ICourseItemModel[]) {
-    return data.map((el: ICourseItemModel) => new CourseItemEntity(el));
+  public static listCreator(data: ICourseItemBackEndModel[]) {
+    return data.map((el: ICourseItemBackEndModel) => {
+
+      return new CourseItemEntity({
+        id: el.id,
+        title: el.name,
+        creationDate: el.date,
+        duration: el.length,
+        description: el.description,
+        // TODO isTopRated: el.isTopRated add later
+        // TODO authors:    el.authors    add later
+      });
+    });
   }
 }
 

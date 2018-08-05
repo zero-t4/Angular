@@ -3,6 +3,9 @@ import {CourseItemEntity} from '../course/course-item/course-item.component';
 import courseItems from './courseItems';
 import {ICourseItemModel, ICourseItemUpdateModel} from '../course/course-item/course-item.model';
 import { find, remove } from 'lodash';
+import {BASE_URL} from "./auth.service";
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -10,10 +13,18 @@ import { find, remove } from 'lodash';
 export class CoursesService {
   private data = courseItems;
   private courseItems = courseItems;
-  constructor() { }
+  private count = 5;
+  constructor(private http: HttpClient) { }
 
-  getCourseItems(): CourseItemEntity[] {
-    return this.courseItems;
+  public getMoreCourseItems(): Observable<CourseItemEntity[]> {
+    this.count = this.count + 5;
+    return this.http
+      .get<CourseItemEntity[]>(`${BASE_URL}/courses?start=0&count=${this.count}`);
+  }
+
+  public getCourseItems(): Observable<CourseItemEntity[]> {
+    return this.http
+      .get<CourseItemEntity[]>(`${BASE_URL}/courses?start=0&count=${this.count}`);
   }
 
   filterCourseItems(searchInput: string): CourseItemEntity[] {
