@@ -31,16 +31,16 @@ export class AuthService {
       );
   }
 
-  logout(): void {
+  public logout(): void {
     localStorage.clear();
     this.router.navigate(['/login']);
   }
 
-  isAuthenticated(): boolean {
+  public isAuthenticated(): boolean {
     return Boolean(localStorage.getItem('token'));
   }
 
-  getUserToken(): string | null {
+  public getUserToken(): string | null {
     return localStorage.getItem('token');
   }
 
