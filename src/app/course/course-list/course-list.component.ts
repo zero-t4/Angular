@@ -1,6 +1,6 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {CoursesService} from '../../services/courses.service';
-import {CourseItemEntity} from '../course-item/course-item.component';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { CoursesService } from '../../services/courses.service';
+import { CourseItemEntity } from '../course-item/course-item.component';
 
 @Component({
   selector: 'app-course-list',
@@ -11,17 +11,10 @@ import {CourseItemEntity} from '../course-item/course-item.component';
 export class CourseListComponent implements OnInit {
   public courseItems: CourseItemEntity[];
 
-  constructor(private coursesService: CoursesService) { }
+  constructor(private coursesService: CoursesService) {}
 
   public loadMoreCoursesHandler(): void {
-    this
-      .coursesService
-      .getMoreCourseItems()
-      // TODO resolve type error and remove
-      // .subscribe((courses: ICourseItemBackEndModel[] = []) => {
-      .subscribe((courses: any = []) => {
-        this.courseItems = CourseItemEntity.listCreator(courses);
-      });
+    this.courseItems = this.coursesService.getMoreCourseItems();
   }
 
   ngOnInit() {
@@ -29,13 +22,6 @@ export class CourseListComponent implements OnInit {
   }
 
   public loadCourses(): void {
-    this
-      .coursesService
-      .getCourseItems()
-        // TODO resolve type error and remove
-        // .subscribe((courses: ICourseItemBackEndModel[] = []) => {
-        .subscribe((courses: any = []) => {
-        this.courseItems = CourseItemEntity.listCreator(courses);
-      });
+    this.courseItems = this.coursesService.getCourseItems();
   }
 }

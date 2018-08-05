@@ -1,52 +1,68 @@
 import { Injectable } from '@angular/core';
-import {CourseItemEntity} from '../course/course-item/course-item.component';
-import courseItems from './courseItems';
-import {ICourseItemModel, ICourseItemUpdateModel} from '../course/course-item/course-item.model';
+import { CourseItemEntity } from '../course/course-item/course-item.component';
+import {
+  ICourseItemModel,
+  ICourseItemUpdateModel,
+} from '../course/course-item/course-item.model';
 import { find, remove } from 'lodash';
-import {BASE_URL} from "./auth.service";
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import { BASE_URL } from './auth.service';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CoursesService {
-  private data = courseItems;
-  private courseItems = courseItems;
+  private courseItems = [];
   private count = 5;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  public getMoreCourseItems(): Observable<CourseItemEntity[]> {
+  public getMoreCourseItems() {
     this.count = this.count + 5;
-    return this.http
-      .get<CourseItemEntity[]>(`${BASE_URL}/courses?start=0&count=${this.count}`);
-  }
-
-  public getCourseItems(): Observable<CourseItemEntity[]> {
-    return this.http
-      .get<CourseItemEntity[]>(`${BASE_URL}/courses?start=0&count=${this.count}`);
-  }
-
-  filterCourseItems(searchInput: string): CourseItemEntity[] {
-    this.courseItems = [
-      ...this.data.filter(
-        el => el
-          .title
-          .toLowerCase()
-          .includes(
-            searchInput.toLowerCase()
-          )
+    this.http
+      .get<CourseItemEntity[]>(
+        `${BASE_URL}/courses?start=0&count=${this.count}`,
       )
-    ];
-
+      .subscribe(
+        data => {
+          this.courseItems = data;
+        },
+        error => console.error(error),
+      );
     return this.courseItems;
   }
 
-  createCourse(el: ICourseItemModel): boolean {
-    this.courseItems = [
-      ...this.courseItems,
-      el,
-    ];
+  public getCourseItems() {
+    this.http
+      .get<CourseItemEntity[]>(
+        `${BASE_URL}/courses?start=0&count=${this.count}`,
+      )
+      .subscribe(
+        data => {
+          this.courseItems = data;
+        },
+        error => console.error(error),
+      );
+    return this.courseItems;
+  }
+
+  public filterCourseItems(searchInput: string) {
+    this.http
+      .get<CourseItemEntity[]>(
+        `${BASE_URL}/courses?start=0&count=${
+          this.count
+        }&textFragment=${searchInput}`,
+      )
+      .subscribe(
+        data => {
+          this.courseItems = data;
+        },
+        error => console.error(error),
+      );
+    return this.courseItems;
+  }
+
+  public createCourse(el: ICourseItemModel): boolean {
+    this.courseItems = [...this.courseItems, el];
 
     return true;
   }
@@ -55,7 +71,7 @@ export class CoursesService {
     return find(this.courseItems, { id }) || {};
   }
 
-  updateItem(id: number, data: ICourseItemUpdateModel ): boolean {
+  updateItem(id: number, data: ICourseItemUpdateModel): boolean {
     const item = this.getItemById(id);
     const newItem: ICourseItemModel = {
       ...item,
