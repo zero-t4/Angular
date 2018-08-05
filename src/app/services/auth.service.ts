@@ -42,12 +42,7 @@ export class AuthService {
     );
   }
 
-  getUserInfo() {
-    const login = localStorage.getItem('login');
-    const pass = localStorage.getItem('pass');
-    return {
-      login,
-      pass,
-    }
+  getUserToken() {
+    return localStorage.getItem('token');
   }
 }
