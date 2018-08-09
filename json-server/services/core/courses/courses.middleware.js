@@ -40,7 +40,7 @@ module.exports = server => {
 
   router.post('/newCourse', (req, res, next) => {
     const newCourse = get(req, 'params', {});
-    console.log(newCourse);
+
     const isParamsValid = [
       'id',
       'name',
@@ -55,6 +55,7 @@ module.exports = server => {
       db.get('courses')
         .push(newCourse)
         .write();
+
       res.status(200).jsonp({
         status: 'ok',
       })
@@ -62,6 +63,48 @@ module.exports = server => {
       res.status(501).jsonp({
         error: 'sent params is not valid',
         params: JSON.stringify(newCourse),
+      })
+    }
+
+  });
+
+  router.post('/removeCourse', (req, res, next) => {
+    const courseId = get(req, 'params.id');
+
+    if (courseId) {
+      db.get('courses')
+        .remove({ id: courseId })
+        .write();
+
+      res.status(200).jsonp({
+        status: 'ok',
+      })
+    } else {
+      res.status(501).jsonp({
+        error: 'sent id is not valid',
+        params: JSON.stringify(courseId),
+      })
+    }
+
+  });
+
+  router.post('/updateCourse', (req, res, next) => {
+    const courseId = get(req, 'params.id');
+    const courseData = get(req, 'params.data', {});
+
+    if (courseId) {
+      db.get('courses')
+        .find({ id: courseId })
+        .assign({...courseData})
+        .write();
+
+      res.status(200).jsonp({
+        status: 'ok',
+      })
+    } else {
+      res.status(501).jsonp({
+        error: 'sent id is not valid',
+        params: JSON.stringify(courseId),
       })
     }
 

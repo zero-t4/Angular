@@ -36,7 +36,7 @@ export class AddEditPageComponent implements OnInit {
           duration,
           description,
         } = fetchData;
-        console.log(fetchData, 'fetchData');
+
         this.newData.id = id;
         this.newData.title = title || 'Sample title';
         this.newData.creationDate = new Date(creationDate).toISOString().slice(0,10) || '2018-05-29';
@@ -47,8 +47,11 @@ export class AddEditPageComponent implements OnInit {
   };
 
   public updateData(newData) {
-    console.log(newData);
-    this.coursesService.updateItem(this.newData.id, newData);
+    if (this.newData.id === 'new') {
+      this.coursesService.createCourse(newData);
+    } else {
+      this.coursesService.updateCourse(this.newData.id, newData);
+    }
     this.location.back();
   }
 

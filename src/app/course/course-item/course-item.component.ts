@@ -57,7 +57,7 @@ export class CourseItemComponent implements OnInit {
   public deleteHandler(id: number): void {
     const answer = window.confirm('Do you really want to delete this item?');
     if (answer) {
-      this.coursesService.removeItem(id);
+      this.coursesService.removeCourse(id);
     }
   }
 }
