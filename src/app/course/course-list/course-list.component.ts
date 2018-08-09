@@ -13,15 +13,22 @@ export class CourseListComponent implements OnInit {
 
   constructor(private coursesService: CoursesService) {}
 
-  public loadMoreCoursesHandler(): void {
-    this.courseItems = this.coursesService.getMoreCourseItems();
-  }
-
   ngOnInit() {
+    this.coursesService.getSource().subscribe(
+      newData => {
+        console.log('newData from Observer', newData);
+        return this.courseItems = newData;
+      },
+      error => console.error(error)
+    );
     this.loadCourses();
   }
 
   public loadCourses(): void {
-    this.courseItems = this.coursesService.getCourseItems();
+    this.coursesService.getCourseItems();
+  }
+
+  public loadMoreCoursesHandler(): void {
+    this.coursesService.getMoreCourseItems();
   }
 }

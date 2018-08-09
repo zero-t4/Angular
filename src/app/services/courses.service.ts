@@ -1,4 +1,4 @@
-import {Injectable, OnInit} from '@angular/core';
+import {Injectable} from '@angular/core';
 import { CourseItemEntity } from '../course/course-item/course-item.component';
 import {
   ICourseItemModel,
@@ -12,7 +12,7 @@ import {Observable, Subscriber} from "rxjs";
 @Injectable({
   providedIn: 'root',
 })
-export class CoursesService implements OnInit {
+export class CoursesService {
   private courseItems = [];
   private subscriber: Subscriber<any[]>;
   private count = 5;
@@ -21,7 +21,7 @@ export class CoursesService implements OnInit {
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit() {
+  private observe() {
     this.source = new Observable<any[]>(subscriber => {
       this.subscriber = subscriber;
     });
@@ -40,7 +40,8 @@ export class CoursesService implements OnInit {
     if (this.source) {
       return this.source;
     } else {
-      return null;
+      this.observe();
+      return this.source ;
     }
   }
 
@@ -53,7 +54,6 @@ export class CoursesService implements OnInit {
         data => this.callNext(data),
         error => console.error(error),
       );
-    return this.courseItems;
   }
 
   private createCourseItem(item: ICourseItemModel) {
@@ -119,5 +119,4 @@ export class CoursesService implements OnInit {
   getItemById(id: number): ICourseItemModel {
     return find(this.courseItems, { id }) || {};
   }
-
 }
