@@ -3,6 +3,11 @@ const { get, toLower } = lodash;
 const express = require('express');
 const router = express.Router();
 const url = require('url');
+const low = require('lowdb');
+const FileSync = require('lowdb/adapters/FileSync');
+
+const adapter = new FileSync(__dirname + '/courses.db.json');
+const db = low(adapter);
 
 module.exports = server => {
   router.get('/courses', (req, res, next) => {
@@ -16,9 +21,7 @@ module.exports = server => {
 
     let sort = query.sort;
     let queryStr = query.query;
-
-    let courses = server.db.getState().courses;
-
+    let courses = db.get('courses');
     if (textFragment) {
       courses = courses.filter(course =>
         toLower(course.name.concat(course.description)).includes(
@@ -33,6 +36,35 @@ module.exports = server => {
     courses = courses.slice(from, to);
 
     res.json(courses);
+  });
+
+  router.post('/newCourse', (req, res, next) => {
+    const newCourse = get(req, 'params', {});
+    console.log(newCourse);
+    const isParamsValid = [
+      'id',
+      'name',
+      'description',
+      'isTopRated',
+      'date',
+      'authors',
+      'length',
+    ].every(param => param in newCourse);
+
+    if (isParamsValid) {
+      db.get('courses')
+        .push(newCourse)
+        .write();
+      res.status(200).jsonp({
+        status: 'ok',
+      })
+    } else {
+      res.status(501).jsonp({
+        error: 'sent params is not valid',
+        params: JSON.stringify(newCourse),
+      })
+    }
+
   });
 
   return router;

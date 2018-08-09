@@ -7,9 +7,21 @@
       "isTopRated": true,
       "date": "2018-07-01",
       "authors": [
-        { "id": 1, "firstName": "Minetta", "lastName": "Devonside" },
-        { "id": 2, "firstName": "Smitty", "lastName": "Gwillyam" },
-        { "id": 3, "firstName": "Wallace", "lastName": "Christoffe" }
+        {
+          "id": 1,
+          "firstName": "Minetta",
+          "lastName": "Devonside"
+        },
+        {
+          "id": 2,
+          "firstName": "Smitty",
+          "lastName": "Gwillyam"
+        },
+        {
+          "id": 3,
+          "firstName": "Wallace",
+          "lastName": "Christoffe"
+        }
       ],
       "length": 39
     },
@@ -20,8 +32,16 @@
       "isTopRated": true,
       "date": "2018-02-23",
       "authors": [
-        { "id": 1, "firstName": "Ludwig", "lastName": "Colson" },
-        { "id": 2, "firstName": "Geoff", "lastName": "Vatini" }
+        {
+          "id": 1,
+          "firstName": "Ludwig",
+          "lastName": "Colson"
+        },
+        {
+          "id": 2,
+          "firstName": "Geoff",
+          "lastName": "Vatini"
+        }
       ],
       "length": 56
     },
@@ -32,9 +52,21 @@
       "isTopRated": false,
       "date": "2018-06-23",
       "authors": [
-        { "id": 1, "firstName": "Leona", "lastName": "Gillibrand" },
-        { "id": 2, "firstName": "Cornelle", "lastName": "Shelper" },
-        { "id": 3, "firstName": "Jeromy", "lastName": "Stickings" }
+        {
+          "id": 1,
+          "firstName": "Leona",
+          "lastName": "Gillibrand"
+        },
+        {
+          "id": 2,
+          "firstName": "Cornelle",
+          "lastName": "Shelper"
+        },
+        {
+          "id": 3,
+          "firstName": "Jeromy",
+          "lastName": "Stickings"
+        }
       ],
       "length": 62
     },
@@ -45,8 +77,16 @@
       "isTopRated": true,
       "date": "2017-05-19",
       "authors": [
-        { "id": 1, "firstName": "Judon", "lastName": "Nipper" },
-        { "id": 2, "firstName": "Gordan", "lastName": "Petchey" }
+        {
+          "id": 1,
+          "firstName": "Judon",
+          "lastName": "Nipper"
+        },
+        {
+          "id": 2,
+          "firstName": "Gordan",
+          "lastName": "Petchey"
+        }
       ],
       "length": 18
     },
@@ -57,8 +97,16 @@
       "isTopRated": false,
       "date": "2018-07-06",
       "authors": [
-        { "id": 1, "firstName": "Christalle", "lastName": "Stringer" },
-        { "id": 2, "firstName": "Gris", "lastName": "Welbelove" }
+        {
+          "id": 1,
+          "firstName": "Christalle",
+          "lastName": "Stringer"
+        },
+        {
+          "id": 2,
+          "firstName": "Gris",
+          "lastName": "Welbelove"
+        }
       ],
       "length": 15
     },
@@ -69,9 +117,21 @@
       "isTopRated": false,
       "date": "2017-10-24",
       "authors": [
-        { "id": 1, "firstName": "Xenos", "lastName": "Frankowski" },
-        { "id": 2, "firstName": "Jamie", "lastName": "Kenzie" },
-        { "id": 3, "firstName": "Leroy", "lastName": "Edlyn" }
+        {
+          "id": 1,
+          "firstName": "Xenos",
+          "lastName": "Frankowski"
+        },
+        {
+          "id": 2,
+          "firstName": "Jamie",
+          "lastName": "Kenzie"
+        },
+        {
+          "id": 3,
+          "firstName": "Leroy",
+          "lastName": "Edlyn"
+        }
       ],
       "length": 53
     },
@@ -82,9 +142,21 @@
       "isTopRated": true,
       "date": "2017-05-12",
       "authors": [
-        { "id": 1, "firstName": "Roana", "lastName": "Proudler" },
-        { "id": 2, "firstName": "Antonino", "lastName": "Lias" },
-        { "id": 3, "firstName": "Mychal", "lastName": "Ivers" }
+        {
+          "id": 1,
+          "firstName": "Roana",
+          "lastName": "Proudler"
+        },
+        {
+          "id": 2,
+          "firstName": "Antonino",
+          "lastName": "Lias"
+        },
+        {
+          "id": 3,
+          "firstName": "Mychal",
+          "lastName": "Ivers"
+        }
       ],
       "length": 85
     },
@@ -95,9 +167,21 @@
       "isTopRated": true,
       "date": "2017-12-25",
       "authors": [
-        { "id": 1, "firstName": "Fulton", "lastName": "McCrisken" },
-        { "id": 2, "firstName": "Everett", "lastName": "Macquire" },
-        { "id": 3, "firstName": "Fawne", "lastName": "Brounsell" }
+        {
+          "id": 1,
+          "firstName": "Fulton",
+          "lastName": "McCrisken"
+        },
+        {
+          "id": 2,
+          "firstName": "Everett",
+          "lastName": "Macquire"
+        },
+        {
+          "id": 3,
+          "firstName": "Fawne",
+          "lastName": "Brounsell"
+        }
       ],
       "length": 82
     },
@@ -108,9 +192,21 @@
       "isTopRated": false,
       "date": "2017-08-23",
       "authors": [
-        { "id": 1, "firstName": "Gage", "lastName": "D'Orsay" },
-        { "id": 2, "firstName": "Diahann", "lastName": "Mullord" },
-        { "id": 3, "firstName": "Katie", "lastName": "Eastcott" }
+        {
+          "id": 1,
+          "firstName": "Gage",
+          "lastName": "D'Orsay"
+        },
+        {
+          "id": 2,
+          "firstName": "Diahann",
+          "lastName": "Mullord"
+        },
+        {
+          "id": 3,
+          "firstName": "Katie",
+          "lastName": "Eastcott"
+        }
       ],
       "length": 82
     },
@@ -121,9 +217,21 @@
       "isTopRated": true,
       "date": "2018-03-29",
       "authors": [
-        { "id": 1, "firstName": "Lanni", "lastName": "Cargen" },
-        { "id": 2, "firstName": "Kendal", "lastName": "Velden" },
-        { "id": 3, "firstName": "Beau", "lastName": "McPhelimy" }
+        {
+          "id": 1,
+          "firstName": "Lanni",
+          "lastName": "Cargen"
+        },
+        {
+          "id": 2,
+          "firstName": "Kendal",
+          "lastName": "Velden"
+        },
+        {
+          "id": 3,
+          "firstName": "Beau",
+          "lastName": "McPhelimy"
+        }
       ],
       "length": 36
     },
@@ -133,7 +241,13 @@
       "description": "Automated tertiary leverage",
       "isTopRated": false,
       "date": "2018-03-06",
-      "authors": [{ "id": 1, "firstName": "Veronique", "lastName": "Heath" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Veronique",
+          "lastName": "Heath"
+        }
+      ],
       "length": 11
     },
     {
@@ -143,9 +257,21 @@
       "isTopRated": true,
       "date": "2017-04-26",
       "authors": [
-        { "id": 1, "firstName": "Mendel", "lastName": "le Keux" },
-        { "id": 2, "firstName": "Lianna", "lastName": "Scaddon" },
-        { "id": 3, "firstName": "Florrie", "lastName": "Unger" }
+        {
+          "id": 1,
+          "firstName": "Mendel",
+          "lastName": "le Keux"
+        },
+        {
+          "id": 2,
+          "firstName": "Lianna",
+          "lastName": "Scaddon"
+        },
+        {
+          "id": 3,
+          "firstName": "Florrie",
+          "lastName": "Unger"
+        }
       ],
       "length": 54
     },
@@ -155,7 +281,13 @@
       "description": "Organized regional infrastructure",
       "isTopRated": true,
       "date": "2018-01-17",
-      "authors": [{ "id": 1, "firstName": "Mariya", "lastName": "Urvoy" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Mariya",
+          "lastName": "Urvoy"
+        }
+      ],
       "length": 55
     },
     {
@@ -164,7 +296,13 @@
       "description": "Enhanced system-worthy encoding",
       "isTopRated": false,
       "date": "2017-09-23",
-      "authors": [{ "id": 1, "firstName": "Dorian", "lastName": "Perfili" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Dorian",
+          "lastName": "Perfili"
+        }
+      ],
       "length": 56
     },
     {
@@ -174,8 +312,16 @@
       "isTopRated": true,
       "date": "2017-12-22",
       "authors": [
-        { "id": 1, "firstName": "Iolande", "lastName": "Cabena" },
-        { "id": 2, "firstName": "Willey", "lastName": "Stuckes" }
+        {
+          "id": 1,
+          "firstName": "Iolande",
+          "lastName": "Cabena"
+        },
+        {
+          "id": 2,
+          "firstName": "Willey",
+          "lastName": "Stuckes"
+        }
       ],
       "length": 63
     },
@@ -186,8 +332,16 @@
       "isTopRated": false,
       "date": "2018-06-05",
       "authors": [
-        { "id": 1, "firstName": "George", "lastName": "Kemmey" },
-        { "id": 2, "firstName": "Maegan", "lastName": "Palffrey" }
+        {
+          "id": 1,
+          "firstName": "George",
+          "lastName": "Kemmey"
+        },
+        {
+          "id": 2,
+          "firstName": "Maegan",
+          "lastName": "Palffrey"
+        }
       ],
       "length": 59
     },
@@ -198,8 +352,16 @@
       "isTopRated": true,
       "date": "2017-04-13",
       "authors": [
-        { "id": 1, "firstName": "Adara", "lastName": "Vogt" },
-        { "id": 2, "firstName": "Shandee", "lastName": "O'Meara" }
+        {
+          "id": 1,
+          "firstName": "Adara",
+          "lastName": "Vogt"
+        },
+        {
+          "id": 2,
+          "firstName": "Shandee",
+          "lastName": "O'Meara"
+        }
       ],
       "length": 63
     },
@@ -210,9 +372,21 @@
       "isTopRated": true,
       "date": "2018-05-11",
       "authors": [
-        { "id": 1, "firstName": "Ruben", "lastName": "Paule" },
-        { "id": 2, "firstName": "Clevie", "lastName": "Pfertner" },
-        { "id": 3, "firstName": "Libbey", "lastName": "Forseith" }
+        {
+          "id": 1,
+          "firstName": "Ruben",
+          "lastName": "Paule"
+        },
+        {
+          "id": 2,
+          "firstName": "Clevie",
+          "lastName": "Pfertner"
+        },
+        {
+          "id": 3,
+          "firstName": "Libbey",
+          "lastName": "Forseith"
+        }
       ],
       "length": 31
     },
@@ -223,8 +397,16 @@
       "isTopRated": true,
       "date": "2017-10-10",
       "authors": [
-        { "id": 1, "firstName": "Martynne", "lastName": "Healing" },
-        { "id": 2, "firstName": "Dody", "lastName": "Brumfield" }
+        {
+          "id": 1,
+          "firstName": "Martynne",
+          "lastName": "Healing"
+        },
+        {
+          "id": 2,
+          "firstName": "Dody",
+          "lastName": "Brumfield"
+        }
       ],
       "length": 42
     },
@@ -235,9 +417,21 @@
       "isTopRated": true,
       "date": "2017-05-11",
       "authors": [
-        { "id": 1, "firstName": "Baldwin", "lastName": "Filipyev" },
-        { "id": 2, "firstName": "Tabor", "lastName": "Grote" },
-        { "id": 3, "firstName": "Cheryl", "lastName": "Roffey" }
+        {
+          "id": 1,
+          "firstName": "Baldwin",
+          "lastName": "Filipyev"
+        },
+        {
+          "id": 2,
+          "firstName": "Tabor",
+          "lastName": "Grote"
+        },
+        {
+          "id": 3,
+          "firstName": "Cheryl",
+          "lastName": "Roffey"
+        }
       ],
       "length": 68
     },
@@ -248,9 +442,21 @@
       "isTopRated": false,
       "date": "2018-05-19",
       "authors": [
-        { "id": 1, "firstName": "Aundrea", "lastName": "Blair" },
-        { "id": 2, "firstName": "Falkner", "lastName": "Primett" },
-        { "id": 3, "firstName": "Wake", "lastName": "Pimlott" }
+        {
+          "id": 1,
+          "firstName": "Aundrea",
+          "lastName": "Blair"
+        },
+        {
+          "id": 2,
+          "firstName": "Falkner",
+          "lastName": "Primett"
+        },
+        {
+          "id": 3,
+          "firstName": "Wake",
+          "lastName": "Pimlott"
+        }
       ],
       "length": 47
     },
@@ -261,8 +467,16 @@
       "isTopRated": true,
       "date": "2017-10-30",
       "authors": [
-        { "id": 1, "firstName": "Mac", "lastName": "McClurg" },
-        { "id": 2, "firstName": "Gaye", "lastName": "Dragonette" }
+        {
+          "id": 1,
+          "firstName": "Mac",
+          "lastName": "McClurg"
+        },
+        {
+          "id": 2,
+          "firstName": "Gaye",
+          "lastName": "Dragonette"
+        }
       ],
       "length": 69
     },
@@ -272,7 +486,13 @@
       "description": "Progressive global neural-net",
       "isTopRated": true,
       "date": "2017-10-30",
-      "authors": [{ "id": 1, "firstName": "Samaria", "lastName": "Gregs" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Samaria",
+          "lastName": "Gregs"
+        }
+      ],
       "length": 44
     },
     {
@@ -282,9 +502,21 @@
       "isTopRated": false,
       "date": "2017-05-22",
       "authors": [
-        { "id": 1, "firstName": "Ethelind", "lastName": "Luckett" },
-        { "id": 2, "firstName": "Silvan", "lastName": "Hackford" },
-        { "id": 3, "firstName": "Bank", "lastName": "Goggan" }
+        {
+          "id": 1,
+          "firstName": "Ethelind",
+          "lastName": "Luckett"
+        },
+        {
+          "id": 2,
+          "firstName": "Silvan",
+          "lastName": "Hackford"
+        },
+        {
+          "id": 3,
+          "firstName": "Bank",
+          "lastName": "Goggan"
+        }
       ],
       "length": 86
     },
@@ -295,9 +527,21 @@
       "isTopRated": true,
       "date": "2018-04-14",
       "authors": [
-        { "id": 1, "firstName": "Archibaldo", "lastName": "Beckerleg" },
-        { "id": 2, "firstName": "Victoir", "lastName": "O'Duggan" },
-        { "id": 3, "firstName": "Nicolis", "lastName": "Gallico" }
+        {
+          "id": 1,
+          "firstName": "Archibaldo",
+          "lastName": "Beckerleg"
+        },
+        {
+          "id": 2,
+          "firstName": "Victoir",
+          "lastName": "O'Duggan"
+        },
+        {
+          "id": 3,
+          "firstName": "Nicolis",
+          "lastName": "Gallico"
+        }
       ],
       "length": 74
     },
@@ -308,9 +552,21 @@
       "isTopRated": false,
       "date": "2017-10-04",
       "authors": [
-        { "id": 1, "firstName": "Olly", "lastName": "Hurry" },
-        { "id": 2, "firstName": "Malissa", "lastName": "Lodeke" },
-        { "id": 3, "firstName": "Koenraad", "lastName": "Archibold" }
+        {
+          "id": 1,
+          "firstName": "Olly",
+          "lastName": "Hurry"
+        },
+        {
+          "id": 2,
+          "firstName": "Malissa",
+          "lastName": "Lodeke"
+        },
+        {
+          "id": 3,
+          "firstName": "Koenraad",
+          "lastName": "Archibold"
+        }
       ],
       "length": 66
     },
@@ -320,7 +576,13 @@
       "description": "Sharable dynamic protocol",
       "isTopRated": false,
       "date": "2017-09-27",
-      "authors": [{ "id": 1, "firstName": "Bailey", "lastName": "Masson" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Bailey",
+          "lastName": "Masson"
+        }
+      ],
       "length": 71
     },
     {
@@ -330,8 +592,16 @@
       "isTopRated": false,
       "date": "2018-03-15",
       "authors": [
-        { "id": 1, "firstName": "Frans", "lastName": "Tuminelli" },
-        { "id": 2, "firstName": "Phil", "lastName": "Apark" }
+        {
+          "id": 1,
+          "firstName": "Frans",
+          "lastName": "Tuminelli"
+        },
+        {
+          "id": 2,
+          "firstName": "Phil",
+          "lastName": "Apark"
+        }
       ],
       "length": 62
     },
@@ -342,9 +612,21 @@
       "isTopRated": false,
       "date": "2018-03-10",
       "authors": [
-        { "id": 1, "firstName": "Irvin", "lastName": "Izakovitz" },
-        { "id": 2, "firstName": "Cynthie", "lastName": "Matyasik" },
-        { "id": 3, "firstName": "Dorice", "lastName": "Bentjens" }
+        {
+          "id": 1,
+          "firstName": "Irvin",
+          "lastName": "Izakovitz"
+        },
+        {
+          "id": 2,
+          "firstName": "Cynthie",
+          "lastName": "Matyasik"
+        },
+        {
+          "id": 3,
+          "firstName": "Dorice",
+          "lastName": "Bentjens"
+        }
       ],
       "length": 64
     },
@@ -355,9 +637,21 @@
       "isTopRated": true,
       "date": "2018-04-28",
       "authors": [
-        { "id": 1, "firstName": "Mel", "lastName": "Heisman" },
-        { "id": 2, "firstName": "Leoline", "lastName": "Maxworthy" },
-        { "id": 3, "firstName": "Bent", "lastName": "O'Fearguise" }
+        {
+          "id": 1,
+          "firstName": "Mel",
+          "lastName": "Heisman"
+        },
+        {
+          "id": 2,
+          "firstName": "Leoline",
+          "lastName": "Maxworthy"
+        },
+        {
+          "id": 3,
+          "firstName": "Bent",
+          "lastName": "O'Fearguise"
+        }
       ],
       "length": 90
     },
@@ -368,7 +662,11 @@
       "isTopRated": true,
       "date": "2017-11-22",
       "authors": [
-        { "id": 1, "firstName": "See", "lastName": "Chillingsworth" }
+        {
+          "id": 1,
+          "firstName": "See",
+          "lastName": "Chillingsworth"
+        }
       ],
       "length": 62
     },
@@ -378,7 +676,13 @@
       "description": "Distributed clear-thinking adapter",
       "isTopRated": false,
       "date": "2018-01-09",
-      "authors": [{ "id": 1, "firstName": "Dorey", "lastName": "Sproson" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Dorey",
+          "lastName": "Sproson"
+        }
+      ],
       "length": 79
     },
     {
@@ -388,8 +692,16 @@
       "isTopRated": true,
       "date": "2018-06-28",
       "authors": [
-        { "id": 1, "firstName": "Anders", "lastName": "Block" },
-        { "id": 2, "firstName": "Gwyn", "lastName": "Weild" }
+        {
+          "id": 1,
+          "firstName": "Anders",
+          "lastName": "Block"
+        },
+        {
+          "id": 2,
+          "firstName": "Gwyn",
+          "lastName": "Weild"
+        }
       ],
       "length": 76
     },
@@ -400,8 +712,16 @@
       "isTopRated": true,
       "date": "2018-06-03",
       "authors": [
-        { "id": 1, "firstName": "Marsha", "lastName": "Ings" },
-        { "id": 2, "firstName": "Philis", "lastName": "Whitticks" }
+        {
+          "id": 1,
+          "firstName": "Marsha",
+          "lastName": "Ings"
+        },
+        {
+          "id": 2,
+          "firstName": "Philis",
+          "lastName": "Whitticks"
+        }
       ],
       "length": 48
     },
@@ -412,9 +732,21 @@
       "isTopRated": true,
       "date": "2018-04-30",
       "authors": [
-        { "id": 1, "firstName": "Marylynne", "lastName": "Beckitt" },
-        { "id": 2, "firstName": "Lawrence", "lastName": "Eton" },
-        { "id": 3, "firstName": "Ursuline", "lastName": "Paintain" }
+        {
+          "id": 1,
+          "firstName": "Marylynne",
+          "lastName": "Beckitt"
+        },
+        {
+          "id": 2,
+          "firstName": "Lawrence",
+          "lastName": "Eton"
+        },
+        {
+          "id": 3,
+          "firstName": "Ursuline",
+          "lastName": "Paintain"
+        }
       ],
       "length": 51
     },
@@ -425,7 +757,11 @@
       "isTopRated": true,
       "date": "2018-05-27",
       "authors": [
-        { "id": 1, "firstName": "Abagail", "lastName": "Mackilpatrick" }
+        {
+          "id": 1,
+          "firstName": "Abagail",
+          "lastName": "Mackilpatrick"
+        }
       ],
       "length": 75
     },
@@ -435,7 +771,13 @@
       "description": "Enhanced clear-thinking encoding",
       "isTopRated": true,
       "date": "2017-04-15",
-      "authors": [{ "id": 1, "firstName": "Nike", "lastName": "Childes" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Nike",
+          "lastName": "Childes"
+        }
+      ],
       "length": 96
     },
     {
@@ -445,8 +787,16 @@
       "isTopRated": false,
       "date": "2017-08-11",
       "authors": [
-        { "id": 1, "firstName": "Marice", "lastName": "Rembaud" },
-        { "id": 2, "firstName": "Hildy", "lastName": "Mattioni" }
+        {
+          "id": 1,
+          "firstName": "Marice",
+          "lastName": "Rembaud"
+        },
+        {
+          "id": 2,
+          "firstName": "Hildy",
+          "lastName": "Mattioni"
+        }
       ],
       "length": 32
     },
@@ -457,9 +807,21 @@
       "isTopRated": true,
       "date": "2017-06-01",
       "authors": [
-        { "id": 1, "firstName": "Calida", "lastName": "Konmann" },
-        { "id": 2, "firstName": "Gifford", "lastName": "Febvre" },
-        { "id": 3, "firstName": "Dex", "lastName": "Aveyard" }
+        {
+          "id": 1,
+          "firstName": "Calida",
+          "lastName": "Konmann"
+        },
+        {
+          "id": 2,
+          "firstName": "Gifford",
+          "lastName": "Febvre"
+        },
+        {
+          "id": 3,
+          "firstName": "Dex",
+          "lastName": "Aveyard"
+        }
       ],
       "length": 18
     },
@@ -470,9 +832,21 @@
       "isTopRated": false,
       "date": "2018-06-04",
       "authors": [
-        { "id": 1, "firstName": "Emelita", "lastName": "Farahar" },
-        { "id": 2, "firstName": "Franky", "lastName": "Hungerford" },
-        { "id": 3, "firstName": "Nady", "lastName": "Lawranson" }
+        {
+          "id": 1,
+          "firstName": "Emelita",
+          "lastName": "Farahar"
+        },
+        {
+          "id": 2,
+          "firstName": "Franky",
+          "lastName": "Hungerford"
+        },
+        {
+          "id": 3,
+          "firstName": "Nady",
+          "lastName": "Lawranson"
+        }
       ],
       "length": 31
     },
@@ -482,7 +856,13 @@
       "description": "Versatile object-oriented adapter",
       "isTopRated": true,
       "date": "2018-01-27",
-      "authors": [{ "id": 1, "firstName": "Davida", "lastName": "Blenkiron" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Davida",
+          "lastName": "Blenkiron"
+        }
+      ],
       "length": 32
     },
     {
@@ -492,8 +872,16 @@
       "isTopRated": false,
       "date": "2018-07-19",
       "authors": [
-        { "id": 1, "firstName": "Tiler", "lastName": "Crowne" },
-        { "id": 2, "firstName": "Magda", "lastName": "Greenrodd" }
+        {
+          "id": 1,
+          "firstName": "Tiler",
+          "lastName": "Crowne"
+        },
+        {
+          "id": 2,
+          "firstName": "Magda",
+          "lastName": "Greenrodd"
+        }
       ],
       "length": 96
     },
@@ -504,9 +892,21 @@
       "isTopRated": true,
       "date": "2017-12-29",
       "authors": [
-        { "id": 1, "firstName": "Tamqrah", "lastName": "Apfelmann" },
-        { "id": 2, "firstName": "Isabelita", "lastName": "Hanse" },
-        { "id": 3, "firstName": "Elbertine", "lastName": "Kuhnert" }
+        {
+          "id": 1,
+          "firstName": "Tamqrah",
+          "lastName": "Apfelmann"
+        },
+        {
+          "id": 2,
+          "firstName": "Isabelita",
+          "lastName": "Hanse"
+        },
+        {
+          "id": 3,
+          "firstName": "Elbertine",
+          "lastName": "Kuhnert"
+        }
       ],
       "length": 90
     },
@@ -517,9 +917,21 @@
       "isTopRated": false,
       "date": "2018-01-02",
       "authors": [
-        { "id": 1, "firstName": "Deane", "lastName": "Gonzalo" },
-        { "id": 2, "firstName": "Brynn", "lastName": "Tackes" },
-        { "id": 3, "firstName": "Mindy", "lastName": "Ridewood" }
+        {
+          "id": 1,
+          "firstName": "Deane",
+          "lastName": "Gonzalo"
+        },
+        {
+          "id": 2,
+          "firstName": "Brynn",
+          "lastName": "Tackes"
+        },
+        {
+          "id": 3,
+          "firstName": "Mindy",
+          "lastName": "Ridewood"
+        }
       ],
       "length": 31
     },
@@ -530,9 +942,21 @@
       "isTopRated": true,
       "date": "2017-07-09",
       "authors": [
-        { "id": 1, "firstName": "Cherry", "lastName": "Goodwin" },
-        { "id": 2, "firstName": "Winonah", "lastName": "Donhardt" },
-        { "id": 3, "firstName": "Doroteya", "lastName": "Aubray" }
+        {
+          "id": 1,
+          "firstName": "Cherry",
+          "lastName": "Goodwin"
+        },
+        {
+          "id": 2,
+          "firstName": "Winonah",
+          "lastName": "Donhardt"
+        },
+        {
+          "id": 3,
+          "firstName": "Doroteya",
+          "lastName": "Aubray"
+        }
       ],
       "length": 68
     },
@@ -542,7 +966,13 @@
       "description": "Compatible value-added standardization",
       "isTopRated": false,
       "date": "2018-02-04",
-      "authors": [{ "id": 1, "firstName": "Corilla", "lastName": "Rastall" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Corilla",
+          "lastName": "Rastall"
+        }
+      ],
       "length": 65
     },
     {
@@ -552,9 +982,21 @@
       "isTopRated": true,
       "date": "2018-04-11",
       "authors": [
-        { "id": 1, "firstName": "Bettine", "lastName": "Tatam" },
-        { "id": 2, "firstName": "Vinni", "lastName": "Clout" },
-        { "id": 3, "firstName": "Lira", "lastName": "Skone" }
+        {
+          "id": 1,
+          "firstName": "Bettine",
+          "lastName": "Tatam"
+        },
+        {
+          "id": 2,
+          "firstName": "Vinni",
+          "lastName": "Clout"
+        },
+        {
+          "id": 3,
+          "firstName": "Lira",
+          "lastName": "Skone"
+        }
       ],
       "length": 70
     },
@@ -565,8 +1007,16 @@
       "isTopRated": true,
       "date": "2017-06-15",
       "authors": [
-        { "id": 1, "firstName": "Pieter", "lastName": "Clemencon" },
-        { "id": 2, "firstName": "Dare", "lastName": "Duffin" }
+        {
+          "id": 1,
+          "firstName": "Pieter",
+          "lastName": "Clemencon"
+        },
+        {
+          "id": 2,
+          "firstName": "Dare",
+          "lastName": "Duffin"
+        }
       ],
       "length": 13
     },
@@ -577,9 +1027,21 @@
       "isTopRated": true,
       "date": "2017-09-04",
       "authors": [
-        { "id": 1, "firstName": "Mary", "lastName": "Booty" },
-        { "id": 2, "firstName": "Valida", "lastName": "O'Dwyer" },
-        { "id": 3, "firstName": "Courtney", "lastName": "Newlyn" }
+        {
+          "id": 1,
+          "firstName": "Mary",
+          "lastName": "Booty"
+        },
+        {
+          "id": 2,
+          "firstName": "Valida",
+          "lastName": "O'Dwyer"
+        },
+        {
+          "id": 3,
+          "firstName": "Courtney",
+          "lastName": "Newlyn"
+        }
       ],
       "length": 69
     },
@@ -590,9 +1052,21 @@
       "isTopRated": true,
       "date": "2017-11-28",
       "authors": [
-        { "id": 1, "firstName": "Halimeda", "lastName": "Clive" },
-        { "id": 2, "firstName": "Esther", "lastName": "Dallywater" },
-        { "id": 3, "firstName": "Hurleigh", "lastName": "Bowcock" }
+        {
+          "id": 1,
+          "firstName": "Halimeda",
+          "lastName": "Clive"
+        },
+        {
+          "id": 2,
+          "firstName": "Esther",
+          "lastName": "Dallywater"
+        },
+        {
+          "id": 3,
+          "firstName": "Hurleigh",
+          "lastName": "Bowcock"
+        }
       ],
       "length": 82
     },
@@ -603,9 +1077,21 @@
       "isTopRated": false,
       "date": "2017-11-30",
       "authors": [
-        { "id": 1, "firstName": "Eamon", "lastName": "Orans" },
-        { "id": 2, "firstName": "Kingsley", "lastName": "Tipper" },
-        { "id": 3, "firstName": "Sari", "lastName": "Kedie" }
+        {
+          "id": 1,
+          "firstName": "Eamon",
+          "lastName": "Orans"
+        },
+        {
+          "id": 2,
+          "firstName": "Kingsley",
+          "lastName": "Tipper"
+        },
+        {
+          "id": 3,
+          "firstName": "Sari",
+          "lastName": "Kedie"
+        }
       ],
       "length": 19
     },
@@ -616,9 +1102,21 @@
       "isTopRated": false,
       "date": "2018-06-11",
       "authors": [
-        { "id": 1, "firstName": "Yuma", "lastName": "Pane" },
-        { "id": 2, "firstName": "Cal", "lastName": "Shelsher" },
-        { "id": 3, "firstName": "Rachael", "lastName": "Wynrehame" }
+        {
+          "id": 1,
+          "firstName": "Yuma",
+          "lastName": "Pane"
+        },
+        {
+          "id": 2,
+          "firstName": "Cal",
+          "lastName": "Shelsher"
+        },
+        {
+          "id": 3,
+          "firstName": "Rachael",
+          "lastName": "Wynrehame"
+        }
       ],
       "length": 30
     },
@@ -629,8 +1127,16 @@
       "isTopRated": false,
       "date": "2017-11-11",
       "authors": [
-        { "id": 1, "firstName": "Micky", "lastName": "Klementz" },
-        { "id": 2, "firstName": "Saree", "lastName": "Fearick" }
+        {
+          "id": 1,
+          "firstName": "Micky",
+          "lastName": "Klementz"
+        },
+        {
+          "id": 2,
+          "firstName": "Saree",
+          "lastName": "Fearick"
+        }
       ],
       "length": 25
     },
@@ -641,8 +1147,16 @@
       "isTopRated": false,
       "date": "2017-08-09",
       "authors": [
-        { "id": 1, "firstName": "Sayers", "lastName": "Straun" },
-        { "id": 2, "firstName": "Jessee", "lastName": "Carlos" }
+        {
+          "id": 1,
+          "firstName": "Sayers",
+          "lastName": "Straun"
+        },
+        {
+          "id": 2,
+          "firstName": "Jessee",
+          "lastName": "Carlos"
+        }
       ],
       "length": 18
     },
@@ -653,9 +1167,21 @@
       "isTopRated": false,
       "date": "2017-11-04",
       "authors": [
-        { "id": 1, "firstName": "Nariko", "lastName": "Plak" },
-        { "id": 2, "firstName": "Mufinella", "lastName": "Houndson" },
-        { "id": 3, "firstName": "Zachary", "lastName": "Darragon" }
+        {
+          "id": 1,
+          "firstName": "Nariko",
+          "lastName": "Plak"
+        },
+        {
+          "id": 2,
+          "firstName": "Mufinella",
+          "lastName": "Houndson"
+        },
+        {
+          "id": 3,
+          "firstName": "Zachary",
+          "lastName": "Darragon"
+        }
       ],
       "length": 22
     },
@@ -666,9 +1192,21 @@
       "isTopRated": true,
       "date": "2017-06-28",
       "authors": [
-        { "id": 1, "firstName": "Melesa", "lastName": "Potes" },
-        { "id": 2, "firstName": "Etienne", "lastName": "Di Francesco" },
-        { "id": 3, "firstName": "Augustine", "lastName": "Jollye" }
+        {
+          "id": 1,
+          "firstName": "Melesa",
+          "lastName": "Potes"
+        },
+        {
+          "id": 2,
+          "firstName": "Etienne",
+          "lastName": "Di Francesco"
+        },
+        {
+          "id": 3,
+          "firstName": "Augustine",
+          "lastName": "Jollye"
+        }
       ],
       "length": 56
     },
@@ -678,7 +1216,13 @@
       "description": "Customizable high-level benchmark",
       "isTopRated": true,
       "date": "2017-07-15",
-      "authors": [{ "id": 1, "firstName": "Kermy", "lastName": "Shiell" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Kermy",
+          "lastName": "Shiell"
+        }
+      ],
       "length": 91
     },
     {
@@ -688,9 +1232,21 @@
       "isTopRated": true,
       "date": "2018-03-17",
       "authors": [
-        { "id": 1, "firstName": "Ardene", "lastName": "Kropp" },
-        { "id": 2, "firstName": "Saw", "lastName": "Bentame" },
-        { "id": 3, "firstName": "Janean", "lastName": "Pakeman" }
+        {
+          "id": 1,
+          "firstName": "Ardene",
+          "lastName": "Kropp"
+        },
+        {
+          "id": 2,
+          "firstName": "Saw",
+          "lastName": "Bentame"
+        },
+        {
+          "id": 3,
+          "firstName": "Janean",
+          "lastName": "Pakeman"
+        }
       ],
       "length": 47
     },
@@ -701,9 +1257,21 @@
       "isTopRated": false,
       "date": "2017-11-14",
       "authors": [
-        { "id": 1, "firstName": "Camila", "lastName": "Treace" },
-        { "id": 2, "firstName": "Nero", "lastName": "Padfield" },
-        { "id": 3, "firstName": "Steffie", "lastName": "Lillgard" }
+        {
+          "id": 1,
+          "firstName": "Camila",
+          "lastName": "Treace"
+        },
+        {
+          "id": 2,
+          "firstName": "Nero",
+          "lastName": "Padfield"
+        },
+        {
+          "id": 3,
+          "firstName": "Steffie",
+          "lastName": "Lillgard"
+        }
       ],
       "length": 28
     },
@@ -714,9 +1282,21 @@
       "isTopRated": true,
       "date": "2018-05-29",
       "authors": [
-        { "id": 1, "firstName": "Sherman", "lastName": "Spikeings" },
-        { "id": 2, "firstName": "Robin", "lastName": "Niesegen" },
-        { "id": 3, "firstName": "Roley", "lastName": "O'Donohue" }
+        {
+          "id": 1,
+          "firstName": "Sherman",
+          "lastName": "Spikeings"
+        },
+        {
+          "id": 2,
+          "firstName": "Robin",
+          "lastName": "Niesegen"
+        },
+        {
+          "id": 3,
+          "firstName": "Roley",
+          "lastName": "O'Donohue"
+        }
       ],
       "length": 30
     },
@@ -726,7 +1306,13 @@
       "description": "Diverse stable conglomeration",
       "isTopRated": true,
       "date": "2017-10-16",
-      "authors": [{ "id": 1, "firstName": "Nikos", "lastName": "Rahl" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Nikos",
+          "lastName": "Rahl"
+        }
+      ],
       "length": 11
     },
     {
@@ -735,7 +1321,13 @@
       "description": "Horizontal next generation extranet",
       "isTopRated": false,
       "date": "2017-11-20",
-      "authors": [{ "id": 1, "firstName": "Vin", "lastName": "Sara" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Vin",
+          "lastName": "Sara"
+        }
+      ],
       "length": 92
     },
     {
@@ -745,8 +1337,16 @@
       "isTopRated": true,
       "date": "2018-01-13",
       "authors": [
-        { "id": 1, "firstName": "Tilly", "lastName": "Barniss" },
-        { "id": 2, "firstName": "Claire", "lastName": "Mosconi" }
+        {
+          "id": 1,
+          "firstName": "Tilly",
+          "lastName": "Barniss"
+        },
+        {
+          "id": 2,
+          "firstName": "Claire",
+          "lastName": "Mosconi"
+        }
       ],
       "length": 60
     },
@@ -757,8 +1357,16 @@
       "isTopRated": true,
       "date": "2017-05-19",
       "authors": [
-        { "id": 1, "firstName": "Elberta", "lastName": "Wedmore" },
-        { "id": 2, "firstName": "Jaclyn", "lastName": "McEntee" }
+        {
+          "id": 1,
+          "firstName": "Elberta",
+          "lastName": "Wedmore"
+        },
+        {
+          "id": 2,
+          "firstName": "Jaclyn",
+          "lastName": "McEntee"
+        }
       ],
       "length": 92
     },
@@ -768,7 +1376,13 @@
       "description": "Persistent secondary functionalities",
       "isTopRated": false,
       "date": "2018-04-02",
-      "authors": [{ "id": 1, "firstName": "Lula", "lastName": "Chidler" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Lula",
+          "lastName": "Chidler"
+        }
+      ],
       "length": 83
     },
     {
@@ -778,8 +1392,16 @@
       "isTopRated": false,
       "date": "2018-05-21",
       "authors": [
-        { "id": 1, "firstName": "Mellisent", "lastName": "Noddles" },
-        { "id": 2, "firstName": "Josiah", "lastName": "Belvard" }
+        {
+          "id": 1,
+          "firstName": "Mellisent",
+          "lastName": "Noddles"
+        },
+        {
+          "id": 2,
+          "firstName": "Josiah",
+          "lastName": "Belvard"
+        }
       ],
       "length": 42
     },
@@ -790,8 +1412,16 @@
       "isTopRated": false,
       "date": "2018-01-25",
       "authors": [
-        { "id": 1, "firstName": "Alaster", "lastName": "Elnaugh" },
-        { "id": 2, "firstName": "Lorene", "lastName": "Arrowsmith" }
+        {
+          "id": 1,
+          "firstName": "Alaster",
+          "lastName": "Elnaugh"
+        },
+        {
+          "id": 2,
+          "firstName": "Lorene",
+          "lastName": "Arrowsmith"
+        }
       ],
       "length": 93
     },
@@ -802,8 +1432,16 @@
       "isTopRated": false,
       "date": "2018-06-29",
       "authors": [
-        { "id": 1, "firstName": "Stanleigh", "lastName": "Torel" },
-        { "id": 2, "firstName": "Luther", "lastName": "Kix" }
+        {
+          "id": 1,
+          "firstName": "Stanleigh",
+          "lastName": "Torel"
+        },
+        {
+          "id": 2,
+          "firstName": "Luther",
+          "lastName": "Kix"
+        }
       ],
       "length": 29
     },
@@ -814,9 +1452,21 @@
       "isTopRated": false,
       "date": "2018-02-03",
       "authors": [
-        { "id": 1, "firstName": "Emeline", "lastName": "Hasluck" },
-        { "id": 2, "firstName": "Benedicta", "lastName": "Caldaro" },
-        { "id": 3, "firstName": "Lefty", "lastName": "Crummy" }
+        {
+          "id": 1,
+          "firstName": "Emeline",
+          "lastName": "Hasluck"
+        },
+        {
+          "id": 2,
+          "firstName": "Benedicta",
+          "lastName": "Caldaro"
+        },
+        {
+          "id": 3,
+          "firstName": "Lefty",
+          "lastName": "Crummy"
+        }
       ],
       "length": 70
     },
@@ -827,9 +1477,21 @@
       "isTopRated": false,
       "date": "2017-11-21",
       "authors": [
-        { "id": 1, "firstName": "Lezlie", "lastName": "Brightling" },
-        { "id": 2, "firstName": "Rosalie", "lastName": "Alans" },
-        { "id": 3, "firstName": "Monty", "lastName": "Daniau" }
+        {
+          "id": 1,
+          "firstName": "Lezlie",
+          "lastName": "Brightling"
+        },
+        {
+          "id": 2,
+          "firstName": "Rosalie",
+          "lastName": "Alans"
+        },
+        {
+          "id": 3,
+          "firstName": "Monty",
+          "lastName": "Daniau"
+        }
       ],
       "length": 84
     },
@@ -839,7 +1501,13 @@
       "description": "Configurable didactic customer loyalty",
       "isTopRated": false,
       "date": "2017-08-16",
-      "authors": [{ "id": 1, "firstName": "Wells", "lastName": "Romanin" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Wells",
+          "lastName": "Romanin"
+        }
+      ],
       "length": 70
     },
     {
@@ -849,8 +1517,16 @@
       "isTopRated": true,
       "date": "2017-08-19",
       "authors": [
-        { "id": 1, "firstName": "Karlene", "lastName": "Dampney" },
-        { "id": 2, "firstName": "Roobbie", "lastName": "Galliver" }
+        {
+          "id": 1,
+          "firstName": "Karlene",
+          "lastName": "Dampney"
+        },
+        {
+          "id": 2,
+          "firstName": "Roobbie",
+          "lastName": "Galliver"
+        }
       ],
       "length": 66
     },
@@ -861,8 +1537,16 @@
       "isTopRated": true,
       "date": "2018-04-02",
       "authors": [
-        { "id": 1, "firstName": "Devan", "lastName": "Meneely" },
-        { "id": 2, "firstName": "Darwin", "lastName": "Breissan" }
+        {
+          "id": 1,
+          "firstName": "Devan",
+          "lastName": "Meneely"
+        },
+        {
+          "id": 2,
+          "firstName": "Darwin",
+          "lastName": "Breissan"
+        }
       ],
       "length": 64
     },
@@ -872,7 +1556,13 @@
       "description": "Total bandwidth-monitored infrastructure",
       "isTopRated": true,
       "date": "2018-04-16",
-      "authors": [{ "id": 1, "firstName": "Pebrook", "lastName": "Norkett" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Pebrook",
+          "lastName": "Norkett"
+        }
+      ],
       "length": 12
     },
     {
@@ -882,8 +1572,16 @@
       "isTopRated": false,
       "date": "2017-06-02",
       "authors": [
-        { "id": 1, "firstName": "Eliza", "lastName": "Rooms" },
-        { "id": 2, "firstName": "Florie", "lastName": "Sibthorpe" }
+        {
+          "id": 1,
+          "firstName": "Eliza",
+          "lastName": "Rooms"
+        },
+        {
+          "id": 2,
+          "firstName": "Florie",
+          "lastName": "Sibthorpe"
+        }
       ],
       "length": 73
     },
@@ -894,8 +1592,16 @@
       "isTopRated": false,
       "date": "2018-06-30",
       "authors": [
-        { "id": 1, "firstName": "Susie", "lastName": "Vasyanin" },
-        { "id": 2, "firstName": "Aura", "lastName": "Asman" }
+        {
+          "id": 1,
+          "firstName": "Susie",
+          "lastName": "Vasyanin"
+        },
+        {
+          "id": 2,
+          "firstName": "Aura",
+          "lastName": "Asman"
+        }
       ],
       "length": 21
     },
@@ -906,8 +1612,16 @@
       "isTopRated": false,
       "date": "2018-06-21",
       "authors": [
-        { "id": 1, "firstName": "Stevana", "lastName": "Pavlik" },
-        { "id": 2, "firstName": "Giffie", "lastName": "Humby" }
+        {
+          "id": 1,
+          "firstName": "Stevana",
+          "lastName": "Pavlik"
+        },
+        {
+          "id": 2,
+          "firstName": "Giffie",
+          "lastName": "Humby"
+        }
       ],
       "length": 49
     },
@@ -917,7 +1631,13 @@
       "description": "Self-enabling scalable conglomeration",
       "isTopRated": true,
       "date": "2017-08-10",
-      "authors": [{ "id": 1, "firstName": "Lester", "lastName": "Geroldo" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Lester",
+          "lastName": "Geroldo"
+        }
+      ],
       "length": 89
     },
     {
@@ -926,7 +1646,13 @@
       "description": "Switchable multi-state benchmark",
       "isTopRated": true,
       "date": "2018-01-19",
-      "authors": [{ "id": 1, "firstName": "Cahra", "lastName": "Kenrat" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Cahra",
+          "lastName": "Kenrat"
+        }
+      ],
       "length": 94
     },
     {
@@ -936,9 +1662,21 @@
       "isTopRated": true,
       "date": "2017-07-25",
       "authors": [
-        { "id": 1, "firstName": "Lindsey", "lastName": "Roxby" },
-        { "id": 2, "firstName": "Bendix", "lastName": "Wimsett" },
-        { "id": 3, "firstName": "Michell", "lastName": "Humburton" }
+        {
+          "id": 1,
+          "firstName": "Lindsey",
+          "lastName": "Roxby"
+        },
+        {
+          "id": 2,
+          "firstName": "Bendix",
+          "lastName": "Wimsett"
+        },
+        {
+          "id": 3,
+          "firstName": "Michell",
+          "lastName": "Humburton"
+        }
       ],
       "length": 91
     },
@@ -948,7 +1686,13 @@
       "description": "Robust asymmetric infrastructure",
       "isTopRated": true,
       "date": "2017-04-12",
-      "authors": [{ "id": 1, "firstName": "Francyne", "lastName": "Woolager" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Francyne",
+          "lastName": "Woolager"
+        }
+      ],
       "length": 47
     },
     {
@@ -958,8 +1702,16 @@
       "isTopRated": false,
       "date": "2018-03-21",
       "authors": [
-        { "id": 1, "firstName": "Candide", "lastName": "Pendre" },
-        { "id": 2, "firstName": "Nerita", "lastName": "Waggatt" }
+        {
+          "id": 1,
+          "firstName": "Candide",
+          "lastName": "Pendre"
+        },
+        {
+          "id": 2,
+          "firstName": "Nerita",
+          "lastName": "Waggatt"
+        }
       ],
       "length": 92
     },
@@ -969,7 +1721,13 @@
       "description": "Self-enabling stable circuit",
       "isTopRated": true,
       "date": "2018-05-27",
-      "authors": [{ "id": 1, "firstName": "Hermy", "lastName": "Bemrose" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Hermy",
+          "lastName": "Bemrose"
+        }
+      ],
       "length": 65
     },
     {
@@ -979,9 +1737,21 @@
       "isTopRated": true,
       "date": "2017-07-28",
       "authors": [
-        { "id": 1, "firstName": "Edyth", "lastName": "De Few" },
-        { "id": 2, "firstName": "Agathe", "lastName": "Vinker" },
-        { "id": 3, "firstName": "Dicky", "lastName": "Aldrin" }
+        {
+          "id": 1,
+          "firstName": "Edyth",
+          "lastName": "De Few"
+        },
+        {
+          "id": 2,
+          "firstName": "Agathe",
+          "lastName": "Vinker"
+        },
+        {
+          "id": 3,
+          "firstName": "Dicky",
+          "lastName": "Aldrin"
+        }
       ],
       "length": 33
     },
@@ -991,7 +1761,13 @@
       "description": "Organized methodical approach",
       "isTopRated": false,
       "date": "2017-04-16",
-      "authors": [{ "id": 1, "firstName": "Diena", "lastName": "Brason" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Diena",
+          "lastName": "Brason"
+        }
+      ],
       "length": 57
     },
     {
@@ -1001,9 +1777,21 @@
       "isTopRated": true,
       "date": "2018-05-21",
       "authors": [
-        { "id": 1, "firstName": "Kaitlin", "lastName": "Marjanovic" },
-        { "id": 2, "firstName": "Verine", "lastName": "Chaim" },
-        { "id": 3, "firstName": "Moishe", "lastName": "Skermer" }
+        {
+          "id": 1,
+          "firstName": "Kaitlin",
+          "lastName": "Marjanovic"
+        },
+        {
+          "id": 2,
+          "firstName": "Verine",
+          "lastName": "Chaim"
+        },
+        {
+          "id": 3,
+          "firstName": "Moishe",
+          "lastName": "Skermer"
+        }
       ],
       "length": 66
     },
@@ -1013,7 +1801,13 @@
       "description": "Diverse 5th generation encryption",
       "isTopRated": false,
       "date": "2017-10-18",
-      "authors": [{ "id": 1, "firstName": "Karlik", "lastName": "Dudin" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Karlik",
+          "lastName": "Dudin"
+        }
+      ],
       "length": 36
     },
     {
@@ -1023,8 +1817,16 @@
       "isTopRated": true,
       "date": "2017-05-28",
       "authors": [
-        { "id": 1, "firstName": "Jere", "lastName": "Pristnor" },
-        { "id": 2, "firstName": "Jannel", "lastName": "Frostdicke" }
+        {
+          "id": 1,
+          "firstName": "Jere",
+          "lastName": "Pristnor"
+        },
+        {
+          "id": 2,
+          "firstName": "Jannel",
+          "lastName": "Frostdicke"
+        }
       ],
       "length": 25
     },
@@ -1035,8 +1837,16 @@
       "isTopRated": false,
       "date": "2018-05-27",
       "authors": [
-        { "id": 1, "firstName": "Allen", "lastName": "Kibbee" },
-        { "id": 2, "firstName": "Jeremy", "lastName": "Wharin" }
+        {
+          "id": 1,
+          "firstName": "Allen",
+          "lastName": "Kibbee"
+        },
+        {
+          "id": 2,
+          "firstName": "Jeremy",
+          "lastName": "Wharin"
+        }
       ],
       "length": 14
     },
@@ -1047,8 +1857,16 @@
       "isTopRated": false,
       "date": "2018-05-13",
       "authors": [
-        { "id": 1, "firstName": "Mordy", "lastName": "Oakhill" },
-        { "id": 2, "firstName": "Thatch", "lastName": "Vidgen" }
+        {
+          "id": 1,
+          "firstName": "Mordy",
+          "lastName": "Oakhill"
+        },
+        {
+          "id": 2,
+          "firstName": "Thatch",
+          "lastName": "Vidgen"
+        }
       ],
       "length": 47
     },
@@ -1059,9 +1877,21 @@
       "isTopRated": false,
       "date": "2017-10-11",
       "authors": [
-        { "id": 1, "firstName": "Allix", "lastName": "Alejandri" },
-        { "id": 2, "firstName": "Elisha", "lastName": "Musselwhite" },
-        { "id": 3, "firstName": "Gian", "lastName": "Outram" }
+        {
+          "id": 1,
+          "firstName": "Allix",
+          "lastName": "Alejandri"
+        },
+        {
+          "id": 2,
+          "firstName": "Elisha",
+          "lastName": "Musselwhite"
+        },
+        {
+          "id": 3,
+          "firstName": "Gian",
+          "lastName": "Outram"
+        }
       ],
       "length": 64
     },
@@ -1071,7 +1901,13 @@
       "description": "Self-enabling intermediate ability",
       "isTopRated": false,
       "date": "2017-04-03",
-      "authors": [{ "id": 1, "firstName": "Hildy", "lastName": "Pruce" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Hildy",
+          "lastName": "Pruce"
+        }
+      ],
       "length": 10
     },
     {
@@ -1081,8 +1917,16 @@
       "isTopRated": true,
       "date": "2017-11-17",
       "authors": [
-        { "id": 1, "firstName": "Farra", "lastName": "Corre" },
-        { "id": 2, "firstName": "Brice", "lastName": "Staynes" }
+        {
+          "id": 1,
+          "firstName": "Farra",
+          "lastName": "Corre"
+        },
+        {
+          "id": 2,
+          "firstName": "Brice",
+          "lastName": "Staynes"
+        }
       ],
       "length": 10
     },
@@ -1092,7 +1936,13 @@
       "description": "De-engineered radical ability",
       "isTopRated": false,
       "date": "2017-10-22",
-      "authors": [{ "id": 1, "firstName": "Terrijo", "lastName": "Fullard" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Terrijo",
+          "lastName": "Fullard"
+        }
+      ],
       "length": 71
     },
     {
@@ -1102,8 +1952,16 @@
       "isTopRated": false,
       "date": "2018-03-21",
       "authors": [
-        { "id": 1, "firstName": "Cherish", "lastName": "Liddell" },
-        { "id": 2, "firstName": "Philippa", "lastName": "Cregg" }
+        {
+          "id": 1,
+          "firstName": "Cherish",
+          "lastName": "Liddell"
+        },
+        {
+          "id": 2,
+          "firstName": "Philippa",
+          "lastName": "Cregg"
+        }
       ],
       "length": 29
     },
@@ -1114,7 +1972,11 @@
       "isTopRated": false,
       "date": "2017-11-22",
       "authors": [
-        { "id": 1, "firstName": "Jeannette", "lastName": "Aldington" }
+        {
+          "id": 1,
+          "firstName": "Jeannette",
+          "lastName": "Aldington"
+        }
       ],
       "length": 79
     },
@@ -1125,9 +1987,21 @@
       "isTopRated": false,
       "date": "2017-07-03",
       "authors": [
-        { "id": 1, "firstName": "Forrester", "lastName": "Pledger" },
-        { "id": 2, "firstName": "Mariana", "lastName": "Skarin" },
-        { "id": 3, "firstName": "Philipa", "lastName": "Paddon" }
+        {
+          "id": 1,
+          "firstName": "Forrester",
+          "lastName": "Pledger"
+        },
+        {
+          "id": 2,
+          "firstName": "Mariana",
+          "lastName": "Skarin"
+        },
+        {
+          "id": 3,
+          "firstName": "Philipa",
+          "lastName": "Paddon"
+        }
       ],
       "length": 71
     },
@@ -1138,8 +2012,16 @@
       "isTopRated": true,
       "date": "2017-11-05",
       "authors": [
-        { "id": 1, "firstName": "Kris", "lastName": "Furse" },
-        { "id": 2, "firstName": "Tye", "lastName": "Mungin" }
+        {
+          "id": 1,
+          "firstName": "Kris",
+          "lastName": "Furse"
+        },
+        {
+          "id": 2,
+          "firstName": "Tye",
+          "lastName": "Mungin"
+        }
       ],
       "length": 88
     },
@@ -1150,8 +2032,16 @@
       "isTopRated": false,
       "date": "2017-06-24",
       "authors": [
-        { "id": 1, "firstName": "Miller", "lastName": "McJarrow" },
-        { "id": 2, "firstName": "Henka", "lastName": "Jaycox" }
+        {
+          "id": 1,
+          "firstName": "Miller",
+          "lastName": "McJarrow"
+        },
+        {
+          "id": 2,
+          "firstName": "Henka",
+          "lastName": "Jaycox"
+        }
       ],
       "length": 23
     },
@@ -1161,7 +2051,13 @@
       "description": "Profit-focused global hierarchy",
       "isTopRated": true,
       "date": "2017-09-23",
-      "authors": [{ "id": 1, "firstName": "Nariko", "lastName": "Curgenven" }],
+      "authors": [
+        {
+          "id": 1,
+          "firstName": "Nariko",
+          "lastName": "Curgenven"
+        }
+      ],
       "length": 89
     }
   ]
