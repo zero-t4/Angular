@@ -8,7 +8,7 @@ import { find, remove } from 'lodash';
 import { BASE_URL } from './auth.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subscriber } from 'rxjs';
-import { BackendResponse} from "./backend-response.model";
+import { BackendResponse } from './backend-response.model';
 
 @Injectable({
   providedIn: 'root',
@@ -54,27 +54,28 @@ export class CoursesService {
         }`,
       )
       .subscribe(
-        (data) => this.callNext(CoursesService.mapBackEndData(data)),
+        data => this.callNext(CoursesService.mapBackEndData(data)),
         error => console.error(error),
       );
   }
 
-  private createCourseItem(item: ICourseItemModel) {
-    this.http.post<BackendResponse>(`${BASE_URL}/newCourse`, {
+  private async createCourseItem(item: ICourseItemModel) {
+    await this.http.post<BackendResponse>(`${BASE_URL}/newCourse`, {
       params: JSON.stringify(item),
-    });
+    }).toPromise();
   }
 
-  private removeCourseItem(id: number) {
-    this.http.post<BackendResponse>(`${BASE_URL}/removeCourse`, {
-      params: {
-        id,
-      },
-    });
+  private async removeCourseItem(id: number) {
+    await this.http
+      .post<BackendResponse>(`${BASE_URL}/removeCourse`, {
+        params: {
+          id,
+        },
+      }).toPromise()
   }
 
-  private updateCourseItem(id, data) {
-    this.http.post<BackendResponse>(`${BASE_URL}/updateCourse`, {
+  private async updateCourseItem(id, data) {
+    await this.http.post<BackendResponse>(`${BASE_URL}/updateCourse`, {
       params: {
         id,
         data,
@@ -92,18 +93,18 @@ export class CoursesService {
     this.getCourseItems();
   }
 
-  public createCourse(el: ICourseItemModel) {
-    this.createCourseItem(el);
+  public async createCourse(el: ICourseItemModel) {
+    await this.createCourseItem(el);
     this.getCourseItems();
   }
 
-  public removeCourse(id: number) {
-    this.removeCourseItem(id);
+  public async removeCourse(id: number) {
+    await this.removeCourseItem(id);
     this.getCourseItems();
   }
 
-  public updateCourse(id: number, data: ICourseItemUpdateModel) {
-    this.updateCourseItem(id, data);
+  public async updateCourse(id: number, data: ICourseItemUpdateModel) {
+    await this.updateCourseItem(id, data);
     this.getCourseItems();
   }
 
@@ -112,7 +113,7 @@ export class CoursesService {
   }
 
   static mapBackEndData(data: ICourseItemBackEndModel[]): ICourseItemModel[] {
-    return data.map((el)  => ({
+    return data.map(el => ({
       id: el.id,
       title: el.name,
       creationDate: el.date,

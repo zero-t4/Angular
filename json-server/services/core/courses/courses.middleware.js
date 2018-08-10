@@ -39,7 +39,7 @@ module.exports = server => {
   });
 
   router.post('/newCourse', (req, res, next) => {
-    const newCourse = get(req, 'params', {});
+    const newCourse = get(req, 'body.params', {});
 
     const isParamsValid = [
       'id',
@@ -69,7 +69,7 @@ module.exports = server => {
   });
 
   router.post('/removeCourse', (req, res, next) => {
-    const courseId = get(req, 'params.id');
+    const courseId = get(req, 'body.params.id');
 
     if (courseId) {
       db.get('courses')
@@ -89,8 +89,8 @@ module.exports = server => {
   });
 
   router.post('/updateCourse', (req, res, next) => {
-    const courseId = get(req, 'params.id');
-    const courseData = get(req, 'params.data', {});
+    const courseId = get(req, 'body.params.id');
+    const courseData = get(req, 'body.params.data', {});
 
     if (courseId) {
       db.get('courses')
