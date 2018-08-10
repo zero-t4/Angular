@@ -1,13 +1,14 @@
-import {Injectable} from '@angular/core';
-import { CourseItemEntity } from '../course/course-item/course-item.component';
+import { Injectable } from '@angular/core';
 import {
+  ICourseItemBackEndModel,
   ICourseItemModel,
   ICourseItemUpdateModel,
 } from '../course/course-item/course-item.model';
 import { find, remove } from 'lodash';
 import { BASE_URL } from './auth.service';
 import { HttpClient } from '@angular/common/http';
-import {Observable, Subscriber} from "rxjs";
+import { Observable, Subscriber } from 'rxjs';
+import { BackendResponse} from "./backend-response.model";
 
 @Injectable({
   providedIn: 'root',
@@ -41,54 +42,44 @@ export class CoursesService {
       return this.source;
     } else {
       this.observe();
-      return this.source ;
+      return this.source;
     }
   }
 
   public getCourseItems() {
     this.http
-      .get<CourseItemEntity[]>(
-        `${BASE_URL}/courses?start=0&count=${this.count}&textFragment=${this.searchInput}`,
+      .get<ICourseItemBackEndModel[]>(
+        `${BASE_URL}/courses?start=0&count=${this.count}&textFragment=${
+          this.searchInput
+        }`,
       )
       .subscribe(
-        data => this.callNext(data),
+        (data) => this.callNext(CoursesService.mapBackEndData(data)),
         error => console.error(error),
       );
   }
 
   private createCourseItem(item: ICourseItemModel) {
-    this.http
-      .post<CourseItemEntity[]>(
-        `${BASE_URL}/newCourse`,
-        {
-          params: JSON.stringify(item),
-        }
-      );
+    this.http.post<BackendResponse>(`${BASE_URL}/newCourse`, {
+      params: JSON.stringify(item),
+    });
   }
 
   private removeCourseItem(id: number) {
-    this.http
-      .post<CourseItemEntity[]>(
-        `${BASE_URL}/removeCourse`,
-        {
-          params: {
-            id
-          }
-        }
-      );
+    this.http.post<BackendResponse>(`${BASE_URL}/removeCourse`, {
+      params: {
+        id,
+      },
+    });
   }
 
   private updateCourseItem(id, data) {
-    this.http
-      .post<CourseItemEntity[]>(
-        `${BASE_URL}/updateCourse`,
-        {
-          params: {
-            id,
-            data,
-          }
-        }
-      );
+    this.http.post<BackendResponse>(`${BASE_URL}/updateCourse`, {
+      params: {
+        id,
+        data,
+      },
+    });
   }
 
   public getMoreCourseItems() {
@@ -118,5 +109,17 @@ export class CoursesService {
 
   getItemById(id: number): ICourseItemModel {
     return find(this.courseItems, { id }) || {};
+  }
+
+  static mapBackEndData(data: ICourseItemBackEndModel[]): ICourseItemModel[] {
+    return data.map((el)  => ({
+      id: el.id,
+      title: el.name,
+      creationDate: el.date,
+      duration: el.length,
+      description: el.description,
+      // TODO isTopRated: el.isTopRated add later
+      // TODO authors:    el.authors    add later
+    }));
   }
 }
