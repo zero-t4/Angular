@@ -1,5 +1,5 @@
 const lodash = require('lodash');
-const { get, toLower } = lodash;
+const { get, toLower, omit } = lodash;
 const express = require('express');
 const router = express.Router();
 const url = require('url');
@@ -8,6 +8,19 @@ const FileSync = require('lowdb/adapters/FileSync');
 
 const adapter = new FileSync(__dirname + '/courses.db.json');
 const db = low(adapter);
+
+const mapDataFromFrontendToBackendModel = data => {
+  return {
+    id: data.id,
+    name: data.title,
+    description: data.description,
+    date: data.creationDate,
+    length: data.duration,
+
+    // TODO isTopRated: data.isTopRated,
+    // TODO authors: data.authors,
+  };
+};
 
 module.exports = server => {
   router.get('/courses', (req, res, next) => {
@@ -39,33 +52,45 @@ module.exports = server => {
   });
 
   router.post('/newCourse', (req, res, next) => {
-    const newCourse = get(req, 'body.params', {});
-
+    const newCourse = mapDataFromFrontendToBackendModel(
+      JSON.parse(get(req, 'body.params', {})),
+    );
     const isParamsValid = [
       'id',
       'name',
       'description',
-      'isTopRated',
       'date',
-      'authors',
+      // TODO uncomment later 'isTopRated',
+      // TODO uncomment later 'authors',
       'length',
     ].every(param => param in newCourse);
 
     if (isParamsValid) {
+      const courses = get(db.getState(), 'courses');
+      const id = courses.length;
+
       db.get('courses')
-        .push(newCourse)
+        .push({
+          ...omit(newCourse, 'id'),
+          id,
+          isTopRated: false,
+          authors: [{
+            "id": 1,
+            "firstName": "Nariko",
+            "lastName": "Curgenven"
+          }],
+        })
         .write();
 
       res.status(200).jsonp({
         status: 'ok',
-      })
+      });
     } else {
       res.status(501).jsonp({
         error: 'sent params is not valid',
         params: JSON.stringify(newCourse),
-      })
+      });
     }
-
   });
 
   router.post('/removeCourse', (req, res, next) => {
@@ -78,14 +103,13 @@ module.exports = server => {
 
       res.status(200).jsonp({
         status: 'ok',
-      })
+      });
     } else {
       res.status(501).jsonp({
         error: 'sent id is not valid',
         params: JSON.stringify(courseId),
-      })
+      });
     }
-
   });
 
   router.post('/updateCourse', (req, res, next) => {
@@ -95,19 +119,18 @@ module.exports = server => {
     if (courseId) {
       db.get('courses')
         .find({ id: courseId })
-        .assign({...courseData})
+        .assign({ ...courseData })
         .write();
 
       res.status(200).jsonp({
         status: 'ok',
-      })
+      });
     } else {
       res.status(501).jsonp({
         error: 'sent id is not valid',
         params: JSON.stringify(courseId),
-      })
+      });
     }
-
   });
 
   return router;
