@@ -10,6 +10,7 @@ import { ROUTES } from './app.routes';
 import { NotFoundModule } from './not-found/not-found.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptor } from './services/token.interceptor';
+import {LoaderModule} from "./loader/loader.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +20,7 @@ import { TokenInterceptor } from './services/token.interceptor';
     LoginPageModule,
     HttpClientModule,
     NotFoundModule,
+    LoaderModule,
     RouterModule.forRoot(ROUTES, { useHash: true }),
   ],
   providers: [
