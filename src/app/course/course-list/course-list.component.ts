@@ -16,7 +16,6 @@ export class CourseListComponent implements OnInit {
     this.coursesService.getSource()
       .subscribe(
       newData => {
-        console.log('newData from Observer', newData);
         this.courseItems = newData;
         // TODO change to container -> component model
         this.changeDetection.markForCheck();
