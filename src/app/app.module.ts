@@ -11,6 +11,7 @@ import { NotFoundModule } from './not-found/not-found.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptor } from './services/token.interceptor';
 import {LoaderModule} from "./loader/loader.module";
+import {LoaderInterceptor} from "./services/loader.interceptor";
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +30,11 @@ import {LoaderModule} from "./loader/loader.module";
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoaderInterceptor,
       multi: true,
     },
   ],
