@@ -29,9 +29,9 @@ export class AddEditPageComponent implements OnInit {
     private coursesService: CoursesService,
   ) {}
 
-  async ngOnInit() {
+  ngOnInit() {
     if (!this.authService.isAuthenticated()) {
-      return await this.router.navigate(['/login']);
+      return this.router.navigate(['/login']);
     }
 
     this.route.params.subscribe((data: ICourseItemModel | any) => {
