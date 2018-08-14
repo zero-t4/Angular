@@ -1,26 +1,36 @@
-import {Component, OnInit } from '@angular/core';
-import {CoursesService} from '../../services/courses.service';
-import {CourseItemEntity} from '../course-item/course-item.component';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import { CoursesService } from '../../services/courses.service';
+import {ICourseItemModel} from "../course-item/course-item.model";
 
 @Component({
   selector: 'app-course-list',
   templateUrl: './course-list.component.html',
-  styleUrls: ['./course-list.component.css']
+  styleUrls: ['./course-list.component.css'],
 })
 export class CourseListComponent implements OnInit {
-  public courseItems: CourseItemEntity[];
+  public courseItems: ICourseItemModel[];
 
-  constructor(private coursesService: CoursesService) { }
-
-  public loadMoreCoursesHandler(): void {
-    console.log('Load more button – click handler');
-  }
+  constructor(private coursesService: CoursesService, private changeDetection: ChangeDetectorRef) {}
 
   ngOnInit() {
+    this.coursesService.getSource()
+      .subscribe(
+      newData => {
+        console.log('newData from Observer', newData);
+        this.courseItems = newData;
+        // TODO change to container -> component model
+        this.changeDetection.markForCheck();
+      },
+      error => console.error(error)
+    );
     this.loadCourses();
   }
 
   public loadCourses(): void {
-    this.courseItems = this.coursesService.getCourseItems();
+    this.coursesService.getCourseItems();
+  }
+
+  public loadMoreCoursesHandler(): void {
+    this.coursesService.getMoreCourseItems();
   }
 }

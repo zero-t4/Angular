@@ -1,27 +1,7 @@
 import {Component, OnInit, Input } from '@angular/core';
-import {ICourseItemModel} from './course-item.model';
 import {CoursesService} from '../../services/courses.service';
 import {Router} from '@angular/router';
-
-export class CourseItemEntity implements ICourseItemModel {
-  public id;
-  public title;
-  public creationDate;
-  public duration;
-  public description;
-
-  constructor(data: ICourseItemModel) {
-    this.id = data.id;
-    this.title = data.title;
-    this.creationDate = data.creationDate;
-    this.duration = data.duration;
-    this.description = data.description;
-  }
-
-  public static listCreator(data: ICourseItemModel[]) {
-    return data.map((el: ICourseItemModel) => new CourseItemEntity(el));
-  }
-}
+import {ICourseItemModel} from "./course-item.model";
 
 @Component({
   selector: 'app-course-item',
@@ -29,7 +9,7 @@ export class CourseItemEntity implements ICourseItemModel {
   styleUrls: ['./course-item.component.css']
 })
 export class CourseItemComponent implements OnInit {
-  @Input() public courseItem: CourseItemEntity;
+  @Input() public courseItem: ICourseItemModel;
 
   constructor(
     private coursesService: CoursesService,
@@ -46,7 +26,7 @@ export class CourseItemComponent implements OnInit {
   public deleteHandler(id: number): void {
     const answer = window.confirm('Do you really want to delete this item?');
     if (answer) {
-      this.coursesService.removeItem(id);
+      this.coursesService.removeCourse(id);
     }
   }
 }
