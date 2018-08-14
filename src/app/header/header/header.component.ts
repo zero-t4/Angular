@@ -6,15 +6,15 @@ import {get} from 'lodash';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit {
-  public user: string = 's';
+  public user: string;
   constructor(private authService: AuthService) {}
 
   ngOnInit() {
-    this.authService.getUserData().subscribe(
+    this.authService.getSource().subscribe(
       response => {
+        console.log('data from o - ', response);
         this.user = get(response, 'name.first');
       },
       e => {
@@ -22,6 +22,7 @@ export class HeaderComponent implements OnInit {
         return console.error(e);
       },
     );
+    this.authService.getUserData();
   }
 
   logout(): void {
