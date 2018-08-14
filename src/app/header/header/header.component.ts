@@ -9,19 +9,26 @@ import {get} from 'lodash';
 })
 export class HeaderComponent implements OnInit {
   public user: string;
+  private storedToken: string;
   constructor(private authService: AuthService) {}
 
   ngOnInit() {
     this.authService.getSource().subscribe(
       response => {
+        const token = response.token;
         this.user = get(response, 'name.first');
+
+        if(token && this.storedToken !== token) {
+
+          this.storedToken = token;
+          this.authService.getUserData();
+        }
       },
       e => {
         alert(`Ошибка ): ${e.statusText}`);
         return console.error(e);
       },
     );
-    this.authService.getUserData();
   }
 
   logout(): void {
