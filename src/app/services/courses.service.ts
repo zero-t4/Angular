@@ -108,7 +108,7 @@ export class CoursesService {
     this.getCourseItems();
   }
 
-  getItemById(id: number): ICourseItemModel {
+  getItemById(id): ICourseItemModel {
     return find(this.courseItems, { id }) || {};
   }
 
