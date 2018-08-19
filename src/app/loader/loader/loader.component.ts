@@ -14,7 +14,6 @@ export class LoaderComponent implements OnInit {
   ngOnInit() {
     this.loaderService.getSource().subscribe(
       visibility => {
-        console.log('data from Ob ', visibility);
         this.visibility = visibility;
       },
       error => console.error(error)

@@ -32,12 +32,10 @@ export class LoaderService {
   }
 
   public show(): void {
-    console.log('called show')
     this.callNext(true);
   }
 
   public hide(): void {
-    console.log('called hide')
     this.callNext(false);
   }
 
