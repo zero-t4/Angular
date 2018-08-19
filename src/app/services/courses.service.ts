@@ -4,11 +4,13 @@ import {
   ICourseItemModel,
   ICourseItemUpdateModel,
 } from '../course/course-item/course-item.model';
-import { find, remove } from 'lodash';
+import { find } from 'lodash';
 import { BASE_URL } from './auth.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subscriber } from 'rxjs';
 import { BackendResponse } from './backend-response.model';
+import {Store} from "@ngrx/store";
+import {RESET_COURSES, UPDATE_COURSES} from "../redux/courses.reducer";
 
 @Injectable({
   providedIn: 'root',
@@ -20,7 +22,10 @@ export class CoursesService {
   private searchInput = '';
   public source: Observable<any>;
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private store: Store<any>
+  ) {}
 
   private observe() {
     this.source = new Observable<any[]>(subscriber => {
@@ -54,8 +59,21 @@ export class CoursesService {
         }`,
       )
       .subscribe(
-        data => this.callNext(CoursesService.mapBackEndData(data)),
-        error => console.error(error),
+        data => {
+          this.store.dispatch({
+            type: UPDATE_COURSES,
+            payload: {
+              courses: data,
+            },
+          });
+          return this.callNext(CoursesService.mapBackEndData(data));
+        },
+        error => {
+          this.store.dispatch({
+            type: RESET_COURSES,
+          });
+          return console.error(error);
+        },
       );
   }
 

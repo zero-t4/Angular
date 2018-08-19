@@ -12,6 +12,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptor } from './services/token.interceptor';
 import { StoreModule } from '@ngrx/store';
 import { authReducer } from "./redux/auth.reducer";
+import {coursesReducer} from "./redux/courses.reducer";
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +23,10 @@ import { authReducer } from "./redux/auth.reducer";
     HttpClientModule,
     NotFoundModule,
     RouterModule.forRoot(ROUTES, { useHash: true }),
-    StoreModule.forRoot({ auth: authReducer }),
+    StoreModule.forRoot({
+      auth: authReducer,
+      courses: coursesReducer,
+    }),
   ],
   providers: [
     CoursesService,
