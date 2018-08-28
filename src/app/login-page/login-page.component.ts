@@ -8,7 +8,7 @@ import {FormControl, FormGroup} from "@angular/forms";
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
-  data = new FormGroup({
+  data: any = new FormGroup({
     login: new FormControl(),
     pass: new FormControl(),
   });

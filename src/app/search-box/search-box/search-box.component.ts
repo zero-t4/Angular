@@ -9,7 +9,7 @@ import {FormControl, FormGroup} from "@angular/forms";
   styleUrls: ['./search-box.component.css']
 })
 export class SearchBoxComponent implements OnInit {
-  data = new FormGroup({
+  data: any = new FormGroup({
     searchInput: new FormControl(),
   });
 
