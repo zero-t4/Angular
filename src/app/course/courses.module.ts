@@ -6,7 +6,7 @@ import {ColorHighlightDirective} from '../directives/color-bind.directive';
 import {DurationPipe} from '../pipes/duration.pipe';
 import {OrderByPipe} from '../pipes/order-by.pipe';
 import { AddEditPageComponent } from './add-edit-page/add-edit-page.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CoursesComponent} from "./courses/courses.component";
 import {HeaderModule} from "../header/header.module";
 import {BreadcrumbsModule} from "../breadcrumbs/breadcrumbs.module";
@@ -17,6 +17,7 @@ import {FooterModule} from "../footer/footer.module";
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     HeaderModule,
     BreadcrumbsModule,
     SearchBoxModule,

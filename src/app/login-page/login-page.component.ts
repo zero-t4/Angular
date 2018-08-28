@@ -1,6 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../services/auth.service';
-import {P} from '@angular/core/src/render3';
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-login-page',
@@ -8,16 +8,17 @@ import {P} from '@angular/core/src/render3';
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
-  @Input() login: string;
-  @Input() pass: string;
+  data = new FormGroup({
+    login: new FormControl(),
+    pass: new FormControl(),
+  });
 
   constructor(private authService: AuthService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   loginHandler() {
-    const { login, pass } = this;
+    const { data: { login, pass } } = this;
 
     if (login && pass) {
       const data = {
