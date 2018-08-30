@@ -3,7 +3,7 @@
 <form [formGroup]="data">
   <label for="title">Title</label>
   <div class="input-group mb-3">
-    <input formControlName="title" type="text" class="form-control" id="title">
+    <input formControlName="title" type="text" class="form-control {{ title.hasError('titleValidation') ? 'hasError' : 'noError' }}" id="title">
   </div>
   <label for="description">Description</label>
   <div class="input-group mb-3">
