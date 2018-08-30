@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, Subscriber } from 'rxjs';
 import { BackendResponse } from './backend-response.model';
 import {Store} from "@ngrx/store";
-import {RESET_COURSES, UPDATE_COURSES} from "../redux/courses.reducer";
+import {CoursesActionReset, CoursesActionUpdate} from "../redux/actions/courses.actions";
 
 @Injectable({
   providedIn: 'root',
@@ -60,18 +60,11 @@ export class CoursesService {
       )
       .subscribe(
         data => {
-          this.store.dispatch({
-            type: UPDATE_COURSES,
-            payload: {
-              courses: data,
-            },
-          });
+          this.store.dispatch(new CoursesActionUpdate({courses: data}));
           return this.callNext(CoursesService.mapBackEndData(data));
         },
         error => {
-          this.store.dispatch({
-            type: RESET_COURSES,
-          });
+          this.store.dispatch(new CoursesActionReset());
           return console.error(error);
         },
       );

@@ -4,7 +4,7 @@ import { get } from 'lodash';
 import { HttpClient } from '@angular/common/http';
 import { IUserModel } from '../user.model';
 import { Store, select } from '@ngrx/store';
-import {LOGIN_FAIL, LOGIN_SUCCESS} from "../redux/auth.reducer";
+import {AuthActionFail, AuthActionSuccess} from "../redux/actions/auth.actions";
 
 export const BASE_URL = 'http://localhost:3004';
 
@@ -31,18 +31,14 @@ export class AuthService {
           const token = get(response, 'token', 0);
           localStorage.setItem('token', token);
 
-          this.store.dispatch({
-            type: LOGIN_SUCCESS,
-            payload: { token },
-          });
+
+          this.store.dispatch(new AuthActionSuccess({ token }));
 
           await this.router.navigate([`courses/`]);
         },
         e => {
 
-          this.store.dispatch({
-            type: LOGIN_FAIL
-          });
+          this.store.dispatch(new AuthActionFail());
 
           alert(`Ошибка ): ${e.statusText}`);
           return console.error(e);
@@ -52,9 +48,7 @@ export class AuthService {
 
   public logout(): void {
     localStorage.clear();
-    this.store.dispatch({
-      type: LOGIN_FAIL
-    });
+    this.store.dispatch(new AuthActionFail());
     this.router.navigate(['/login']);
   }
 
