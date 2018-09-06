@@ -5,7 +5,7 @@ import { ICourseItemModel } from '../course-item/course-item.model';
 import { CoursesService } from '../../services/courses.service';
 import { AuthService } from '../../services/auth.service';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {titleValidation, descriptionValidation, durationValidation} from './add-edit-page.component.validation';
+import { durationValidation } from './add-edit-page.component.validation';
 import {SET_COURSE_DATA} from "../../redux/courses.reducer";
 import {Store} from "@ngrx/store";
 
@@ -26,10 +26,10 @@ export class AddEditPageComponent implements OnInit {
 
   data: ICourseItemModel | any = new FormGroup({
     id: new FormControl(`new`),
-    title: new FormControl(`Sample Title`, [ Validators.required, titleValidation ]),
+    title: new FormControl(`Sample Title`, [ Validators.required, Validators.maxLength(50) ]),
     creationDate: new FormControl(`${new Date().toISOString().slice(0, 10)}`, [ Validators.required ]),
     duration: new FormControl(`131`, [ Validators.required, durationValidation ]),
-    description: new FormControl(`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`, [ Validators.required, descriptionValidation ]),
+    description: new FormControl(`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`, [ Validators.required, Validators.maxLength(500) ]),
   });
 
   async ngOnInit() {
