@@ -55,8 +55,8 @@ export class AddEditPageComponent implements OnInit {
         this.store.dispatch({
           type: SET_COURSE_DATA,
           payload: {
-            courseName: this.newData.id,
-            courseData: this.newData,
+            courseName: this.data.id,
+            courseData: this.data,
           }
         })
       }
