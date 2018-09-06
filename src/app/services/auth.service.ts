@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { get } from 'lodash';
 import { HttpClient } from '@angular/common/http';
-import { IUserModel } from '../user.model';
 import { Store, select } from '@ngrx/store';
 import {AuthActionFail, AuthActionSuccess} from "../redux/actions/auth.actions";
 import {IUserModel, IUserModelToken} from '../user.model';
@@ -18,19 +17,14 @@ export class AuthService {
   private subscriber: Subscriber<any[]>;
   private userData: any;
   public source: Observable<any>;
-  
+
   constructor(
     private router: Router,
     private http: HttpClient,
     private store: Store<any>
   ) {
     this.token = store.pipe(select('auth'));
-
-
-  constructor(
-    private router: Router,
-    private http: HttpClient
-  ) {}
+  }
 
   private observe() {
     this.source = new Observable<any[]>(subscriber => {
