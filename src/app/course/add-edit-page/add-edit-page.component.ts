@@ -63,6 +63,16 @@ export class AddEditPageComponent implements OnInit {
     });
   }
 
+  public get isFormValid() {
+    return [
+      this.data.title,
+      this.data.description,
+      this.data.title,
+    ].every(
+      control => control.valid
+    );
+  }
+
   public async updateData(data) {
     if (this.data.id === 'new') {
       await this.coursesService.createCourse(data);
