@@ -1,25 +1,30 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, OnInit, Input, forwardRef } from '@angular/core';
+import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
-import { DateInputComponent } from './date-input.component';
+@Component({
+  selector: 'app-date-input',
+  templateUrl: './date-input.component.html',
+  styleUrls: ['./date-input.component.css'],
+  providers: [{
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: forwardRef(() => DateInput),
+    multi: true
+  }]
+})
+export class DateInput implements OnInit, ControlValueAccessor {
+  @Input()
+  public creationDate: Date;
 
-describe('DateInputComponent', () => {
-  let component: DateInputComponent;
-  let fixture: ComponentFixture<DateInputComponent>;
+  constructor() { }
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ DateInputComponent ]
-    })
-    .compileComponents();
-  }));
+  ngOnInit() {
+  }
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(DateInputComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  public writeValue(date: Date) {
+    this.creationDate = date;
+  }
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  public registerOnChange(changedHandler: any) { }
+
+  public registerOnTouched() { }
+}
