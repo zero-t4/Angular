@@ -13,6 +13,9 @@ import { TokenInterceptor } from './services/token.interceptor';
 import { StoreModule } from '@ngrx/store';
 import { authReducer } from "./redux/auth.reducer";
 import {coursesReducer} from "./redux/courses.reducer";
+import {LoaderModule} from "./loader/loader.module";
+import {LoaderInterceptor} from "./services/loader.interceptor";
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +25,7 @@ import {coursesReducer} from "./redux/courses.reducer";
     LoginPageModule,
     HttpClientModule,
     NotFoundModule,
+    LoaderModule,
     RouterModule.forRoot(ROUTES, { useHash: true }),
     StoreModule.forRoot({
       auth: authReducer,
@@ -34,6 +38,11 @@ import {coursesReducer} from "./redux/courses.reducer";
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoaderInterceptor,
       multi: true,
     },
   ],

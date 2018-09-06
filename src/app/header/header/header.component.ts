@@ -6,16 +6,23 @@ import {get} from 'lodash';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit {
-  public user: string = 's';
+  public user: string;
+  private storedToken: string;
   constructor(private authService: AuthService) {}
 
   ngOnInit() {
-    this.authService.getUserData().subscribe(
+    this.authService.getSource().subscribe(
       response => {
+        const token = response.token;
         this.user = get(response, 'name.first');
+
+        if(token && this.storedToken !== token) {
+
+          this.storedToken = token;
+          this.authService.getUserData();
+        }
       },
       e => {
         alert(`Ошибка ): ${e.statusText}`);

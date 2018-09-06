@@ -32,9 +32,9 @@ export class AddEditPageComponent implements OnInit {
     private store: Store<any>
   ) {}
 
-  async ngOnInit() {
+  ngOnInit() {
     if (!this.authService.isAuthenticated()) {
-      return await this.router.navigate(['/login']);
+      return this.router.navigate(['/login']);
     }
 
     this.route.params.subscribe((data: ICourseItemModel | any) => {
