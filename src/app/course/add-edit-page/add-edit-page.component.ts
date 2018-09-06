@@ -6,6 +6,8 @@ import { CoursesService } from '../../services/courses.service';
 import { AuthService } from '../../services/auth.service';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {titleValidation, descriptionValidation, durationValidation} from './add-edit-page.component.validation';
+import {SET_COURSE_DATA} from "../../redux/courses.reducer";
+import {Store} from "@ngrx/store";
 
 @Component({
   selector: 'app-add-edit-page',
@@ -19,6 +21,7 @@ export class AddEditPageComponent implements OnInit {
     private router: Router,
     private authService: AuthService,
     private coursesService: CoursesService,
+    private store: Store<any>
   ) {}
 
   data: ICourseItemModel | any = new FormGroup({
@@ -29,9 +32,9 @@ export class AddEditPageComponent implements OnInit {
     description: new FormControl(`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`, [ Validators.required, descriptionValidation ]),
   });
 
-  async ngOnInit() {
+  ngOnInit() {
     if (!this.authService.isAuthenticated()) {
-      return await this.router.navigate(['/login']);
+      return this.router.navigate(['/login']);
     }
 
     this.route.params.subscribe((data: ICourseItemModel | any) => {
@@ -47,6 +50,13 @@ export class AddEditPageComponent implements OnInit {
           .slice(0, 10);
         this.data.duration = duration;
         this.data.description = description;
+        this.store.dispatch({
+          type: SET_COURSE_DATA,
+          payload: {
+            courseName: this.newData.id,
+            courseData: this.newData,
+          }
+        })
       }
     });
   }

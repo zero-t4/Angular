@@ -25,7 +25,7 @@ export class LoginPageComponent implements OnInit {
         login,
         pass,
       };
-      this.authService.login(data)
+      this.authService.login(data);
     } else {
       console.log('bad credentials')
     }

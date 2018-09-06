@@ -1,6 +1,6 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CoursesService } from '../../services/courses.service';
-import {ICourseItemModel} from "../course-item/course-item.model";
+import { ICourseItemModel } from '../course-item/course-item.model';
 
 @Component({
   selector: 'app-course-list',
@@ -10,18 +10,19 @@ import {ICourseItemModel} from "../course-item/course-item.model";
 export class CourseListComponent implements OnInit {
   public courseItems: ICourseItemModel[];
 
-  constructor(private coursesService: CoursesService, private changeDetection: ChangeDetectorRef) {}
+  constructor(
+    private coursesService: CoursesService,
+    private changeDetection: ChangeDetectorRef,
+  ) {}
 
   ngOnInit() {
-    this.coursesService.getSource()
-      .subscribe(
+    this.coursesService.getSource().subscribe(
       newData => {
-        console.log('newData from Observer', newData);
         this.courseItems = newData;
         // TODO change to container -> component model
         this.changeDetection.markForCheck();
       },
-      error => console.error(error)
+      error => console.error(error),
     );
     this.loadCourses();
   }
