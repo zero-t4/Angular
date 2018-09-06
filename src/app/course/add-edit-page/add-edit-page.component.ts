@@ -6,6 +6,8 @@ import { CoursesService } from '../../services/courses.service';
 import { AuthService } from '../../services/auth.service';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {titleValidation, descriptionValidation, durationValidation} from './add-edit-page.component.validation';
+import {SET_COURSE_DATA} from "../../redux/courses.reducer";
+import {Store} from "@ngrx/store";
 
 @Component({
   selector: 'app-add-edit-page',
@@ -19,6 +21,7 @@ export class AddEditPageComponent implements OnInit {
     private router: Router,
     private authService: AuthService,
     private coursesService: CoursesService,
+    private store: Store<any>
   ) {}
 
   data: ICourseItemModel | any = new FormGroup({
@@ -30,8 +33,9 @@ export class AddEditPageComponent implements OnInit {
   });
 
   async ngOnInit() {
+
     if (!this.authService.isAuthenticated()) {
-      return await this.router.navigate(['/login']);
+      return this.router.navigate(['/login']);
     }
 
     this.route.params.subscribe((data: ICourseItemModel | any) => {
@@ -45,6 +49,7 @@ export class AddEditPageComponent implements OnInit {
         this.data.creationDate = new Date(creationDate)
           .toISOString()
           .slice(0, 10);
+
         this.data.duration = duration;
         this.data.description = description;
       }
