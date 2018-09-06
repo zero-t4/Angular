@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { get } from 'lodash';
 import { HttpClient } from '@angular/common/http';
+import { IUserModel } from '../user.model';
+import { Store, select } from '@ngrx/store';
+import {AuthActionFail, AuthActionSuccess} from "../redux/actions/auth.actions";
 import {IUserModel, IUserModelToken} from '../user.model';
 import {Observable, Subscriber} from "rxjs";
 
@@ -11,9 +14,18 @@ export const BASE_URL = 'http://localhost:3004';
   providedIn: 'root',
 })
 export class AuthService {
+  public token;
   private subscriber: Subscriber<any[]>;
   private userData: any;
   public source: Observable<any>;
+  
+  constructor(
+    private router: Router,
+    private http: HttpClient,
+    private store: Store<any>
+  ) {
+    this.token = store.pipe(select('auth'));
+
 
   constructor(
     private router: Router,
@@ -62,9 +74,15 @@ export class AuthService {
             token
           });
 
+
+          this.store.dispatch(new AuthActionSuccess({ token }));
+
           await this.router.navigate([`courses/`]);
         },
         e => {
+
+          this.store.dispatch(new AuthActionFail());
+
           alert(`Ошибка ): ${e.statusText}`);
           return console.error(e);
         },
@@ -73,8 +91,8 @@ export class AuthService {
 
   public logout(): void {
     localStorage.clear();
+    this.store.dispatch(new AuthActionFail());
     this.callNext('clear');
-
     this.router.navigate(['/login']);
   }
 

@@ -4,6 +4,8 @@ import { Location } from '@angular/common';
 import { ICourseItemModel } from '../course-item/course-item.model';
 import { CoursesService } from '../../services/courses.service';
 import { AuthService } from '../../services/auth.service';
+import {SET_COURSE_DATA} from "../../redux/courses.reducer";
+import {Store} from "@ngrx/store";
 
 @Component({
   selector: 'app-add-edit-page',
@@ -27,6 +29,7 @@ export class AddEditPageComponent implements OnInit {
     private router: Router,
     private authService: AuthService,
     private coursesService: CoursesService,
+    private store: Store<any>
   ) {}
 
   ngOnInit() {
@@ -47,6 +50,13 @@ export class AddEditPageComponent implements OnInit {
           .slice(0, 10);
         this.newData.duration = duration;
         this.newData.description = description;
+        this.store.dispatch({
+          type: SET_COURSE_DATA,
+          payload: {
+            courseName: this.newData.id,
+            courseData: this.newData,
+          }
+        })
       }
     });
   }
