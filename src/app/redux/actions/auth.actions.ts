@@ -6,7 +6,7 @@ export enum AuthActions {
 export class AuthActionSuccess {
   public readonly type = AuthActions.LOGIN_SUCCESS;
 
-  constructor(private payload: {token: string}) {}
+  constructor(private payload: {token: string}) { }
 }
 
 export class AuthActionFail {
