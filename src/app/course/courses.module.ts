@@ -12,6 +12,7 @@ import {HeaderModule} from "../header/header.module";
 import {BreadcrumbsModule} from "../breadcrumbs/breadcrumbs.module";
 import {SearchBoxModule} from "../search-box/search-box.module";
 import {FooterModule} from "../footer/footer.module";
+import { DateInputComponent } from './add-edit-page/date-input/date-input.component';
 
 @NgModule({
   imports: [
@@ -30,12 +31,14 @@ import {FooterModule} from "../footer/footer.module";
     DurationPipe,
     OrderByPipe,
     AddEditPageComponent,
-    CoursesComponent
+    CoursesComponent,
+    DateInputComponent
   ],
   exports: [
     CoursesComponent,
     CourseListComponent,
     AddEditPageComponent,
+    DateInputComponent
   ]
 })
 export class CoursesModule { }
