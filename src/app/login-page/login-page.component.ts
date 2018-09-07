@@ -1,3 +1,4 @@
+import { get } from 'lodash';
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../services/auth.service';
 import {FormControl, FormGroup} from "@angular/forms";
@@ -18,8 +19,9 @@ export class LoginPageComponent implements OnInit {
   ngOnInit() {}
 
   loginHandler() {
-    const { data: { login, pass } } = this;
-
+    const login = get(this, 'data.value.login');
+    const pass = get(this, 'data.value.pass');
+    console.log(login, pass);
     if (login && pass) {
       const data = {
         login,
