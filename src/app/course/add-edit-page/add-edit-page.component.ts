@@ -32,7 +32,7 @@ export class AddEditPageComponent implements OnInit {
     description: new FormControl(`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`, [ Validators.required, Validators.maxLength(500) ]),
   });
 
-  async ngOnInit() {
+  ngOnInit() {
 
     if (!this.authService.isAuthenticated()) {
       return this.router.navigate(['/login']);
@@ -73,11 +73,13 @@ export class AddEditPageComponent implements OnInit {
     );
   }
 
-  public async updateData(data) {
-    if (this.data.id === 'new') {
-      await this.coursesService.createCourse(data);
+  public async updateData() {
+    const value = this.data.value;
+
+    if (value.id === 'new') {
+      await this.coursesService.createCourse(value);
     } else {
-      await this.coursesService.updateCourse(this.data.id, data);
+      await this.coursesService.updateCourse(value.id, value);
     }
     this.location.back();
   }
