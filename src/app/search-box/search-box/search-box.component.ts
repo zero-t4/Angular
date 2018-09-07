@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {CoursesService} from '../../services/courses.service';
 import {Router} from '@angular/router';
 import {FormControl, FormGroup} from "@angular/forms";
+import { get } from 'lodash';
 
 @Component({
   selector: 'app-search-box',
@@ -18,7 +19,8 @@ export class SearchBoxComponent implements OnInit {
     private coursesService: CoursesService
   ) { }
 
-  searchHandler(searchInput) {
+  searchHandler() {
+    const searchInput = get(this, 'data.value.searchInput');
     this.coursesService.filterCourseItems(searchInput);
   }
 
