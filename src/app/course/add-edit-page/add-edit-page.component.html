@@ -1,28 +1,28 @@
 <app-header></app-header>
 <app-breadcrumbs></app-breadcrumbs>
-<div>
+<form [formGroup]="data">
   <label for="title">Title</label>
   <div class="input-group mb-3">
-    <input [(ngModel)]="newData.title" type="text" class="form-control" id="title">
+    <input formControlName="title" type="text" class="form-control" id="title">
   </div>
   <label for="description">Description</label>
   <div class="input-group mb-3">
-    <textarea [(ngModel)]="newData.description" rows="5" type="text" class="form-control" id="description"></textarea>
+    <textarea formControlName="description" rows="5" type="text" class="form-control" id="description"></textarea>
   </div>
   <label for="date">Date</label>
   <div class="input-group mb-3 container">
     <div class="row">
       <div class="col p-0">
-        <input type="date" [(ngModel)]="newData.creationDate" class="form-control" id="date">
+        <app-date-input formControlName="creationDate" id="date"></app-date-input>
       </div>
     </div>
   </div>
   <label for="duration">Duration</label>
   <div class="input-group mb-3 p-0">
     <div class="d-flex flex-row align-items-center p-0">
-        <input [(ngModel)]="newData.duration" type="text" class="form-control mr-4"  id="duration">
+        <input formControlName="duration" type="text" class="form-control mr-4"  id="duration">
         <span>
-          {{newData.duration | durationPipe}}
+          {{data.duration | durationPipe}}
         </span>
     </div>
   </div>
@@ -31,7 +31,7 @@
   <div class="input-group mb-3">
     <input type="text" value="Sample authors" class="form-control" id="authors">
   </div>
-  <button type="button" class="btn btn-primary btn-lg px-5 mr-4" (click)="updateData(newData).then()">Save</button>
+  <button type="button" class="btn btn-primary btn-lg px-5 mr-4" (click)="updateData().then()">Save</button>
   <button type="button" class="btn btn-secondary btn-lg px-5" (click)="cancel()">Cancel</button>
-</div>
+</form>
 <app-footer></app-footer>

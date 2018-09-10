@@ -5,10 +5,10 @@
         Login
       </div>
       <div class="card-body w450">
-        <form>
+        <form [formGroup]="data">
           <label for="basic-email">Email *required</label>
           <input
-            [(ngModel)]="login"
+            formControlName="login"
             type="text"
             class="form-control"
             placeholder="Please enter email"
@@ -17,14 +17,14 @@
           >
           <label for="basic-password">Password *required</label>
           <input
-            [(ngModel)]="pass"
+            formControlName="pass"
             type="text"
             class="form-control"
             placeholder="Please enter password"
             id="basic-password"
             name="password"
           >
-          <button type="submit" (click)="loginHandler()" class="btn btn-primary mt-2 {{login && pass && 'white'}}">Login</button>
+          <button type="submit" (click)="loginHandler()" class="btn btn-primary mt-2 {{data.login && data.pass && 'white'}}">Login</button>
         </form>
       </div>
     </div>

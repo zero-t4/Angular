@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoginPageComponent } from './login-page.component';
 import {HeaderModule} from '../header/header.module';
 import {FooterModule} from '../footer/footer.module';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -11,6 +11,7 @@ import {FormsModule} from '@angular/forms';
     HeaderModule,
     FooterModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   declarations: [LoginPageComponent],
   exports: [LoginPageComponent]

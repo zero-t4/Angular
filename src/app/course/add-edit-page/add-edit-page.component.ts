@@ -1,9 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { ICourseItemModel } from '../course-item/course-item.model';
 import { CoursesService } from '../../services/courses.service';
 import { AuthService } from '../../services/auth.service';
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+import { durationValidation } from './add-edit-page.component.validation';
 import {SET_COURSE_DATA} from "../../redux/courses.reducer";
 import {Store} from "@ngrx/store";
 
@@ -13,16 +15,6 @@ import {Store} from "@ngrx/store";
   styleUrls: ['./add-edit-page.component.css'],
 })
 export class AddEditPageComponent implements OnInit {
-  @Input()
-  newData: ICourseItemModel | any = {
-    id: 'new',
-    title: 'Sample title',
-    creationDate: new Date().toISOString().slice(0, 10),
-    duration: 131,
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-  };
-
   constructor(
     private location: Location,
     private route: ActivatedRoute,
@@ -32,7 +24,16 @@ export class AddEditPageComponent implements OnInit {
     private store: Store<any>
   ) {}
 
+  data: ICourseItemModel | any = new FormGroup({
+    id: new FormControl(`new`),
+    title: new FormControl(`Sample Title`, [ Validators.required, Validators.maxLength(50) ]),
+    creationDate: new FormControl(`${new Date().toISOString().slice(0, 10)}`, [ Validators.required ]),
+    duration: new FormControl(`131`, [ Validators.required, durationValidation ]),
+    description: new FormControl(`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`, [ Validators.required, Validators.maxLength(500) ]),
+  });
+
   ngOnInit() {
+
     if (!this.authService.isAuthenticated()) {
       return this.router.navigate(['/login']);
     }
@@ -43,29 +44,42 @@ export class AddEditPageComponent implements OnInit {
           this.coursesService.getItemById(Number(data.id)) || {};
         const { id, title, creationDate, duration, description } = fetchData;
 
-        this.newData.id = id;
-        this.newData.title = title;
-        this.newData.creationDate = new Date(creationDate)
+        this.data.id = id;
+        this.data.title = title;
+        this.data.creationDate = new Date(creationDate)
           .toISOString()
           .slice(0, 10);
-        this.newData.duration = duration;
-        this.newData.description = description;
+
+        this.data.duration = duration;
+        this.data.description = description;
         this.store.dispatch({
           type: SET_COURSE_DATA,
           payload: {
-            courseName: this.newData.id,
-            courseData: this.newData,
+            courseName: this.data.id,
+            courseData: this.data,
           }
         })
       }
     });
   }
 
-  public async updateData(newData) {
-    if (this.newData.id === 'new') {
-      await this.coursesService.createCourse(newData);
+  public get isFormValid() {
+    return [
+      this.data.title,
+      this.data.description,
+      this.data.title,
+    ].every(
+      control => control.valid
+    );
+  }
+
+  public async updateData() {
+    const value = this.data.value;
+
+    if (value.id === 'new') {
+      await this.coursesService.createCourse(value);
     } else {
-      await this.coursesService.updateCourse(this.newData.id, newData);
+      await this.coursesService.updateCourse(value.id, value);
     }
     this.location.back();
   }
